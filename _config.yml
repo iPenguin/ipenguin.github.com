@@ -1,25 +1,28 @@
-title:            Site Title
-tagline:          A short tagline
-description:      Describe your website.
+title:            iPenguin
+description:      Tales from the command line
+logo:             site-logo.png
+disqus_shortname: ipenguinblog
+search:           true
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://localhost:4000
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  name:           Brian Milco
+  avatar:         brian.jpg
+  bio:            "A Linux guy with Apple hardware."
+  email:          brian@milco.info
+  # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         
+  github:         iPenguin
+  stackexchange:  
   linkedin:       
   instagram:      
-  lastfm:         
+  flickr:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus:    https://plus.google.com/u/0/108621939678980094834
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -34,14 +37,12 @@ links:
     url: /about/
   - title: Articles
     url: /articles/
-  - title: Theme Setup
-    url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
+#  - title: Made Mistakes
+#    url: http://mademistakes.com
+#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    America/Los_Angeles
 future:      true
 pygments:    true
 markdown:    kramdown
