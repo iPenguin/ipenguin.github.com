@@ -1,0 +1,26 @@
+---
+title: "Docbook & CMake for cross platform documentation"
+layout: "post"
+permalink: "/2012/11/docbook-cmake-for-cross-platform.html"
+uuid: "5201424067889033394"
+guid: "tag:blogger.com,1999:blog-3270817893928434685.post-5201424067889033394"
+date: "2012-11-26 17:00:00"
+updated: "2012-11-26 17:00:08"
+description: 
+blogger:
+    siteid: "3270817893928434685"
+    postid: "5201424067889033394"
+    comments: "0"
+categories: [documentation, docbook, pdf, cmake, cross platform]
+author: 
+    name: "Brian C. Milco"
+    url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+comments: true
+---
+
+{% raw %}
+<div class="css-full-post-content js-full-post-content">
+<br />Docbook XML is a great technology but it takes some work to get it all setup.&nbsp;This post will hopefully jump start the process for you.<br /><br />I've put together a cmake script (<span style="font-family: Courier New, Courier, monospace;">DocbookGen.cmake</span>) that makes it a lot easier to convert the documentation from Docbook markup to one of several common formats: plain html, pdf, and Microsoft html help (chm files), and I put the files in a gist: <a href="https://gist.github.com/4142447">https://gist.github.com/4142447</a><br /><br />What you'll need:<br /><br />For all platforms:<br />-docbook-xsl-ns (<a href="http://sourceforge.net/projects/docbook/files/docbook-xsl-ns/">http://sourceforge.net/projects/docbook/files/docbook-xsl-ns/</a>)<br />-xsltproc (native on Mac, use cygwin installer on Windows)<br />-fop (<a href="http://xmlgraphics.apache.org/fop/download.html">http://xmlgraphics.apache.org/fop/download.html</a>)<br />-cmake (<a href="http://cmake.org/cmake/resources/software.html">http://cmake.org/cmake/resources/software.html</a>)<br />-The official docbook guide (for syntax reference) - <a href="http://docbook.org/tdg51/en/html/">http://docbook.org/tdg51/en/html/</a><br /><br />Additionally for Windows:<br />-hhc - Microsoft HTML Help SDK ( <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms669985(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/ms669985(v=vs.85).aspx</a> )<br /><br />Project structure:<br /><br />&nbsp;[PROJECT]/<br />&nbsp; +cmake/modules/<br />&nbsp; | &nbsp; &nbsp; DocbookGen.cmake &nbsp; <br />&nbsp; +docs/<br />&nbsp; &nbsp; &nbsp; &nbsp; index.docbook.in<br />&nbsp; &nbsp; &nbsp; &nbsp; myStyle.xsl.in<br />&nbsp; &nbsp; &nbsp; &nbsp; images/cover.png<br /><br />I've included a basic docbook file (<span style="font-family: Courier New, Courier, monospace;">index.docbook.in</span>) with a simple book structure for creating documentation. If you are using the <span style="font-family: Courier New, Courier, monospace;">myStyle.xsl.in</span> file unaltered you'll also need to create a cover image for the pdf file.<br /><br />By using <span style="font-family: Courier New, Courier, monospace;">configure_file</span> with <span style="font-family: Courier New, Courier, monospace;">index.docbook.in</span> you can use variables in cmake to generate the common values that are needed in the documentation as well as the package and software. Docbook doesn't have the ability to do conditional imports which is an issue because you have to import the default xsl files on each platform and they usually have different paths (especially on Windows). To get around this issue I used CMake's ability to configure files to specify which path to use based on the platform.<br /><br />Use the code in the CMakeLists.txt file (in the gist) to create the documentation files you need. Once you've got the documentation built you'll have to "install" it into the package in the <span style="font-family: Courier New, Courier, monospace;">CMakeLists.txt</span> file:<br /><br /><span style="font-family: Courier New, Courier, monospace;">install(FILES "${CMAKE_BINARY_DIR}/docs/pdf/${PROJECT_NAME}_User_Guide_${VERSION_SHORT}.pdf" DESTINATION bin)</span><br /><br />Once you've got the process down you just need to write your documentation, the syntax can be a little verbose, especially if you're used to writing HTML.
+</div>
+{% endraw %}
