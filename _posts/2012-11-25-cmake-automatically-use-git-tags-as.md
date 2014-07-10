@@ -119,3 +119,20 @@ const QString gVERSION_SHORT = "@VERSION_SHORT@";
 
 With all these pieces you should be able to use the `gVERSION` and `gVERSION_SHORT` anywhere you `#include "version.h"`.
 You can also use the `${VERSION}` and `${VERSION_SHORT}` anywhere in your cmake build files including in cpack which means updating your installers and packages is a snap too.
+
+UPDATE: Apparently there have been changes made to the GetGitRevisionDescription.cmake file. If you edit it and remove line 110: `${hash}` it should work.
+
+I've posted a working copy on github: [https://github.com/iPenguin/version_git](https://github.com/iPenguin/version_git)
+To try it:
+
+{% highlight bash %}
+$ git clone https://github.com/iPenguin/version_git.git
+
+$ cd version_git
+
+$ mkdir build && cd build
+
+$ cmake .. && make
+
+$ ./version_from_git
+{% endhighlight %}
