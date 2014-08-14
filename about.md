@@ -16,5 +16,6 @@ I learned about Linux in high school and I've been using it continuously since 1
 <br />
 Since 2005 I've concentrated on programming. 
 First working on an internal web application for a small local insurance company, 
-then on databases for a custom software company, 
-and finally for myself creating specialized graphics design software for crochet designers.
+then on databases for a company that created custom software for business clients, 
+For almost three years I wrote and sold a piece of software for a niche market.
+At my current job I'm working on the internal web application used to run order management, and customer service.
