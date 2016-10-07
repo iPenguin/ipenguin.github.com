@@ -11,11 +11,7 @@ image:
 ---
 
 I've known I wanted to work with computers as a profession since I was 13 years old. 
-I learned about Linux in high school and I've been using it continuously since 1999.
+I learned about Linux while I was still in high school and I've been using it where ever and whenever I can since 1999.
 <br />
+I enjoy coding and system administration. My favorite tool is git. My favorite type of projects are infrastructure projects, setting up the systems and tooling needed to smooth the task of writing and deploying software, managing servers, workstations, and services, or writing custom libraries for a specific business need. I hate repetitive tasks, and I am always looking for opportunities to automate them. I enjoy a challenge that engages me in the creative process of designing new or replacement systems.
 <br />
-Since 2005 I've concentrated on programming. 
-First working on an internal web application for a small local insurance company, 
-then on databases for a company that created custom software for business clients, 
-For almost three years I wrote and sold a piece of software for a niche market.
-At my current job I'm working on the internal web application used to run order management, and customer service.
