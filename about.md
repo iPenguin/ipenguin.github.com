@@ -11,8 +11,8 @@ image:
 ---
 
 I've known I wanted to work with computers as a profession since I was 13 years old.
-I learned about Linux while I was still in high school and I've been using it where ever and whenever I can since 1999.
+I found out about Linux while I was still in high school and I've been using it where ever and whenever I can since 1999.
 <br>
 <br>
-I enjoy coding and system administration. My favorite tool is git. My favorite type of projects are infrastructure projects, setting up the systems and tooling needed to smooth the task of writing and deploying software, managing servers, workstations, and services, or writing custom libraries for a specific business need. I hate repetitive tasks, and I am always looking for opportunities to automate them. I enjoy a challenge that engages me in the creative process of designing new or replacement systems.
+I enjoy coding and system administration. My favorite tool is git. My favorite type of projects are software infrastructure projects, setting up the systems and tooling needed to smooth the task of writing and deploying software, managing servers, workstations, and services, or writing custom libraries for specific business needs. I get bored by repetitive tasks, and it makes me happy when I can automate them, especially if it relieves someone else of their drudge work. I also enjoy a challenge that engages me in the creative process of designing new or replacement systems.
 <br>
