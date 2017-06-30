@@ -1,7 +1,7 @@
 ---
 title: "Writting Git Hooks in Node.js"
 layout: "post"
-permalink: "/2016/11/writting-git-hooks-in-node.js.html"
+permalink: "/2016/11/writting-git-hooks-in-nodejs.html"
 date: "2016-11-30 17:30:00"
 description: "A quick tutorial on writting git hooks using javascript and Node.js"
 categories: [Node.js, git, hooks, readline, commander]
@@ -12,18 +12,18 @@ author:
 comments: true
 ---
 
-###Writting Git Hooks in Node.js
-
 At work we use the post-receive git hook to automatically deploy websites on a number of our servers. Among a few other things the hook is used to recreate cached pages when templates are modified. Lately, we've added some additional tasks to the post-receive hook and it is becoming more complicated. So when we wanted to add automatic minification of the CSS and JavaScript resources to the hook, we made the decision to convert it to Node.js.
 
 We choose Node.js because we were planning to use two minifiers that required Node.js anyway, and we are looking into the possibility of using Node.js for future projects, so this hook was a good, low risk, place to work with Node.js and see how it will fit in at our business.
 
-If you've written git hooks before you know that any information passed to the hook is passed via stdin and not as parameters to the script. To get the data passed to the hook you need to include and use the readline node module.
+### Getting Data from Git
+
+If you've written git hooks before you know that any information passed to the hook is passed via stdin and not as parameters to the script. To get the data that git passes to the hook you need to include and use the readline node module.
 
 Install readline and save it with your git hook project:
 {% highlight bash %}
  npm install --save readline
-{% end highlight %}
+{% endhighlight %}
 
 Include readline and parse the data from stdin:
 {% highlight javascript %}
@@ -42,13 +42,15 @@ function main( oldRev, newRev, branch ) {
     //Do minification, caching and other fun stuff.
     ...
 }
-{% end highlight %}
+{% endhighlight %}
 
-You can make it possible to run the hook on the command line by accepting command line parameters in your Node.js script. You can do this by adding and requiring commander.
+### Testing your Hook on the Command Line
+
+I prefer to test my scripts on the command line. I also find it helpful to be able to run the deployment process manually should something fail. You can make it possible to run the hook on the command line by accepting command line parameters in your Node.js script. You can do this by adding and requiring commander.
 
 {% highlight bash %}
  npm install --save commander
-{% end highlight %}
+{% endhighlight %}
 
 {% highlight javascript %}
 const program = require( 'commander' );
@@ -79,9 +81,6 @@ process.exit();
 function main( oldRev, newRev, branch ) {
     ...
 }
-{% end highlight %}
+{% endhighlight %}
 
-Adding code so that you can run the hook manually makes it easier to test.
-
-
-Prior art that inspired me: http://blog.bradleygore.com/2015/08/07/git-hooks-for-the-front-end-developer/
+When I started this project I took inspiration from [Git Hooks for the Front End Developer](http://blog.bradleygore.com/2015/08/07/git-hooks-for-the-front-end-developer/) by Bradly Gore.

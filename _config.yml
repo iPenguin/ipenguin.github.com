@@ -16,7 +16,7 @@ owner:
   twitter:        
   facebook:       
   github:         iPenguin
-  stackexchange:  
+  stackexchange:  /users/7082336/brian-milco
   linkedin:       
   instagram:      
   flickr:         
@@ -28,7 +28,7 @@ owner:
 google_analytics:   
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
+bing_verify: 7999124E41BF1DCB5E0008162A81E762        
 
 # Links to include in top navigation
 # For external links add external: true
