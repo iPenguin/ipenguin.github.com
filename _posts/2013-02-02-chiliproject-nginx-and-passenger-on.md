@@ -19,7 +19,7 @@ author:
 comments: true
 ---
 
-###Background
+### Background
 
 Yes, I bought a [Raspberry Pi](http://downloads.element14.com/raspberryPi1.html). :-) 
 I have some additional things I like to try out on it, but first I wanted to set it up as a low power NAS and web server.
@@ -31,7 +31,7 @@ Unfortunately the deb packages on Raspian don't come with support for Passenger 
 
 As a side note I did try to use thin to serve the ChiliProjcet, but let's just say I didn't have any luck with that.
 
-###Some notes before your start
+### Some notes before your start
 
 I used [Raspbian Server Edition](http://sirlagz.net/tag/raspbian-server-edition/) for this setup. 
 When I tried the same process on a [Raspbmc](http://www.raspbmc.com/) card I had lying around it wouldn't compile nginx.
@@ -42,7 +42,7 @@ If you don't care feel free to combine them into one line and come back when it'
 The Pi isn't the fastest device so you'll probably want to set aside an evening to get this up and running. 
 Also the very first time you try to connect to the setup it's pretty slow to respond, but subsequent, connections and page loads go at a reasonably usable speed.
 
-###Installing what you need
+### Installing what you need
 
 If you have nginx and passenger installed already go ahead and remove them.
 
@@ -109,7 +109,7 @@ sudo apt-get install bundler
 sudo bundle install [--without test development]
 {% endhighlight %}
 
-###Finishing up
+### Finishing up
 
 The basics are now installed and setup. You can use [the official guide](https://www.chiliproject.org/projects/chiliproject/wiki/Installation) to do the rest of the installation starting at step 3. 
 Everything else went smoothly for a clean install, and for an upgrade from an old Redmine install.
