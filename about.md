@@ -3,9 +3,9 @@ layout: page
 permalink: /about/
 title: About Brian Milco
 tags: [resume, about]
-modified: 2014-01-08
+modified: 2017-06-29
 image:
-  feature: view_from_mt_lassen3-sm.jpg
+  feature: table-mountain-20170402.jpg
   credit: Brian Milco
   creditlink: http://brian.milco.info
 ---
