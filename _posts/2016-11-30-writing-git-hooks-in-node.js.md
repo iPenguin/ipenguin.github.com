@@ -1,11 +1,11 @@
 ---
-title: "Writting Git Hooks in Node.js"
+title: "Writing Git Hooks in Node.js"
 layout: "post"
-permalink: "/2016/11/writting-git-hooks-in-nodejs.html"
+permalink: "/2016/11/writing-git-hooks-in-nodejs.html"
 date: "2016-11-30 17:30:00"
-description: "A quick tutorial on writting git hooks using javascript and Node.js"
+description: "A quick tutorial on writing git hooks using javascript and Node.js"
 categories: [Node.js, git, hooks, readline, commander]
-author: 
+author:
     name: "Brian C. Milco"
     url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
     image: "http://img2.blogblog.com/img/b16-rounded.gif"
@@ -58,7 +58,7 @@ const program = require( 'commander' );
 program
     .description( 'git post-receive hook' )
     .usage( '[options]' )
-    .option( '-b, --branch <branch>', 'Branch of the repo being commited' )
+    .option( '-b, --branch <branch>', 'Branch of the repo being committed' )
     .option( '-n, --new <newRevision>', 'New revision we would like to deploy' )
     .option( '-o, --old <oldRevision>', 'Old revision currently deployed' )
     .parse( process.argv );
