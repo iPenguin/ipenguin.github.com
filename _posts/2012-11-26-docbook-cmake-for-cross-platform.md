@@ -1,33 +1,30 @@
 ---
 title: "Docbook & CMake for cross platform documentation"
-layout: "post"
 permalink: "/2012/11/docbook-cmake-for-cross-platform.html"
 uuid: "5201424067889033394"
 guid: "tag:blogger.com,1999:blog-3270817893928434685.post-5201424067889033394"
 date: "2012-11-26 17:00:00"
 updated: "2012-11-26 17:00:08"
-description: 
+excert: "Using cmake to generate docbooks files into platform specific documentation"
 blogger:
     siteid: "3270817893928434685"
     postid: "5201424067889033394"
     comments: "0"
+header:
+    teaser: '/assets/images/cmake-logo-sm.png'
 categories: [documentation, docbook, pdf, cmake, cross platform]
-author: 
-    name: "Brian C. Milco"
-    url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
-    image: "http://img2.blogblog.com/img/b16-rounded.gif"
 comments: true
 ---
 
-Docbook XML is a great technology but it takes some work to get it all setup. 
+Docbook XML is a great technology but it takes some work to get it all setup.
 This post will hopefully jump start the process for you.
 
-I've put together a cmake script (DocbookGen.cmake) that makes it a lot easier to convert the documentation from Docbook markup to one of several common formats: plain html, pdf, and Microsoft html help (chm files), 
+I've put together a cmake script (DocbookGen.cmake) that makes it a lot easier to convert the documentation from Docbook markup to one of several common formats: plain html, pdf, and Microsoft html help (chm files),
 and I put the files in [a gist](https://gist.github.com/4142447).
 
 What you'll need:
 
-For *buntu: 
+For *buntu:
 `sudo apt-get install docbook-xsl-ns xsltproc fop cmake`
 
 
@@ -48,22 +45,22 @@ Project structure:
             myStyle.xsl.in
             images/cover.png
 
-You should save the DocbookGen.cmake module as described in the project structure. 
+You should save the DocbookGen.cmake module as described in the project structure.
 You may need to edit paths in the module depending on your installations.
 
 DocbookGen.cmake:
 
 {% gist iPenguin/4142447 DocbookGen.cmake %}
-            
-I've included a basic docbook file (index.docbook.in) with a simple book structure for creating documentation. 
+
+I've included a basic docbook file (index.docbook.in) with a simple book structure for creating documentation.
 If you are using the myStyle.xsl.in file unaltered you'll also need to create a cover image for the pdf file.
 
 index.docbook.in:
 
 {% gist iPenguin/4142447 index.docbook.in %}
 
-By using configure_file with index.docbook.in you can use variables in cmake to generate the common values that are needed in the documentation as well as the package and software. 
-Docbook doesn't have the ability to do conditional imports which is an issue because you have to import the default xsl files on each platform and they usually have different paths (especially on Windows). 
+By using configure_file with index.docbook.in you can use variables in cmake to generate the common values that are needed in the documentation as well as the package and software.
+Docbook doesn't have the ability to do conditional imports which is an issue because you have to import the default xsl files on each platform and they usually have different paths (especially on Windows).
 To get around this issue I used CMake's ability to configure files to specify which path to use based on the platform.
 You can see this on line 9 in the myStyle.xsl.in file below.
 
@@ -71,9 +68,9 @@ myStyle.xsl.in:
 
 {% gist iPenguin/4142447 myStyle.xsl.in %}
 
-Use the code in the CMakeLists.txt file to create the documentation files you need. 
+Use the code in the CMakeLists.txt file to create the documentation files you need.
 
-CMakeLists.txt: 
+CMakeLists.txt:
 
 {% gist iPenguin/4142447 CMakeLists.txt %}
 

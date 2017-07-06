@@ -1,21 +1,18 @@
 ---
 title: "ext Filesystems and the Missing 5%"
-layout: "post"
 permalink: "/2011/12/ext-filesystems-and-missing-5.html"
 uuid: "3997253902596511394"
 guid: "tag:blogger.com,1999:blog-3270817893928434685.post-3997253902596511394"
 date: "2011-12-14 01:34:00"
 updated: "2012-11-25 00:40:10"
-description: 
+excerpt: "turn off the reserve 5% on ext filesystems"
 blogger:
     siteid: "3270817893928434685"
     postid: "3997253902596511394"
     comments: "0"
+header:
+    teaser: '/assets/images/linux-sm.jpg'
 categories: [ext, filesystems, space]
-author: 
-    name: "Brian C. Milco"
-    url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
-    image: "http://img3.blogblog.com/img/b16-rounded.gif"
 comments: true
 ---
 
@@ -30,4 +27,3 @@ $ sudo tune2fs -m 0 /dev/sdb1 # <-- your partition may vary!
 -m Sets the percentage to be used by the system, so you can set it to whatever you want.
 
 I usually end up forgetting this command and have to look it up so this blog is as much a reminder to myself as anything else.
-

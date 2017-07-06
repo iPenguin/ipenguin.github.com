@@ -1,28 +1,25 @@
 ---
 title: "Color debug output with Qt4 and qDebug()"
-layout: "post"
 permalink: "/2011/11/color-debug-output-with-qt-and-qdebug.html"
 uuid: "96765458961442037"
 guid: "tag:blogger.com,1999:blog-3270817893928434685.post-96765458961442037"
 date: "2011-11-02 19:14:00"
 updated: "2011-11-02 19:16:29"
-description: 
+excerpt: "Colorize the debug output of Qt4 code"
 blogger:
     siteid: "3270817893928434685"
     postid: "96765458961442037"
     comments: "0"
+header:
+    teaser: '/assets/images/qt-logo-sm.png'
 categories: [output, debug, color, qt]
-author: 
-    name: "Brian C. Milco"
-    url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
-    image: "http://img2.blogblog.com/img/b16-rounded.gif"
 comments: true
 ---
 
-I'm a very visual person, and color makes it a lot faster and easier for me to work. That's why I really like kDevelop with it's semantic highlighting. 
+I'm a very visual person, and color makes it a lot faster and easier for me to work. That's why I really like kDevelop with it's semantic highlighting.
 Anymore when I see grey text on a black console it feels blob-like and hard to read especially if the output is verbose.
 
-I use Qt on a regular basis for my day job and while I love the framework it's debug output is vanilla. 
+I use Qt on a regular basis for my day job and while I love the framework it's debug output is vanilla.
 So I wanted to go from:
 
 {% highlight bash %}
@@ -41,20 +38,20 @@ to something a little more useful for finding problems:
 <span style="color: #cc0000;">Fatal</span>: <span style="color: green;">MainWindow</span>::<span style="color: #0000aa;">MainWindow</span>(<span style="color: #6fa8dc;">QStringList</span>, <span style="color: #6fa8dc;">QWidget*</span>) : fatal output
 </pre>
 
-Before we get started there are 2 main draw backs to this setup. 
-First is that you can really only pass in QStrings. 
+Before we get started there are 2 main draw backs to this setup.
+First is that you can really only pass in QStrings.
 If you want to pass in anything else you have to wrap it like this:
 
 {% highlight cpp %}
 DEBUG("myNumber = " + QString::number(myNumber));
 {% endhighlight %}
 
-Second and more important kDevelop and QtCreator don't display the colorized output properly, 
-and it actually makes it harder to read debug information. Keeping that in mind let's continue. 
+Second and more important kDevelop and QtCreator don't display the colorized output properly,
+and it actually makes it harder to read debug information. Keeping that in mind let's continue.
 
 With a little customization to Qt's message handler you can get a description and a little color:
 
-errorhandler.h: 
+errorhandler.h:
 {% highlight cpp %}
 #ifndef ERRORHANDLER_H
 #define ERRORHANDLER_H
@@ -103,8 +100,8 @@ debug output
 <span style="color: #cc0000;">Fatal</span>: fatal output
 </pre>
 
-That's a nice start but I also like to include the function name in the debug output so I know which class and function is giving me which output, but I hate having to add the information manually. 
-What I want is `__PRETTY_FUNCTION__` or `Q_FUNC_INFO` (basically the same thing), but if you include that in the error handler above it's going to give you `void errorHandler(QtMsgType, const char*)`. 
+That's a nice start but I also like to include the function name in the debug output so I know which class and function is giving me which output, but I hate having to add the information manually.
+What I want is `__PRETTY_FUNCTION__` or `Q_FUNC_INFO` (basically the same thing), but if you include that in the error handler above it's going to give you `void errorHandler(QtMsgType, const char*)`.
 Not very useful. So I put together some macros to pass messages and data to the actual message handlers with the `Q_FUNC_INFO` prepended.
 
 debug.h:
@@ -140,7 +137,7 @@ debug.h:
 #endif // DEBUG_H
 {% endhighlight %}
 
-Because of the formatting in the macros you can use them in code as if they were actual functions. 
+Because of the formatting in the macros you can use them in code as if they were actual functions.
 Changing the debug lines in main() above to the following:
 
 {% highlight cpp %}
@@ -155,12 +152,12 @@ Results in the output:
 <pre>
 MainWindow::MainWindow(QStringList, QWidget*) : debug output
 <span style="color: #f1c232;">Warning</span>: MainWindow::MainWindow(QStringList, QWidget*) : warning output
-<span style="color: #cc0000;">Critical</span>: MainWindow::MainWindow(QStringList, QWidget*) : critical output 
+<span style="color: #cc0000;">Critical</span>: MainWindow::MainWindow(QStringList, QWidget*) : critical output
 <span style="color: #cc0000;">Fatal</span>: MainWindow::MainWindow(QStringList, QWidget*) : fatal output
 </pre>
 
-Useful but still a lot of blob-like black text. 
-So I decided to create a function to parse the `Q_FUNC_INFO` string and add a little more color. 
+Useful but still a lot of blob-like black text.
+So I decided to create a function to parse the `Q_FUNC_INFO` string and add a little more color.
 So I added this to the debug.cpp files.
 
 debug.cpp:

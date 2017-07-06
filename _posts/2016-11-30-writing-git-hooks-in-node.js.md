@@ -1,14 +1,12 @@
 ---
 title: "Writing Git Hooks in Node.js"
-layout: "post"
 permalink: "/2016/11/writing-git-hooks-in-nodejs.html"
 date: "2016-11-30 17:30:00"
-description: "A quick tutorial on writing git hooks using javascript and Node.js"
+updated: "2016-11-30 17:30:00"
+excerpt: "A quick tutorial on writing git hooks using javascript and Node.js"
+header:
+  teaser: "/assets/images/nodejs-sm.png"
 categories: [Node.js, git, hooks, readline, commander]
-author:
-    name: "Brian C. Milco"
-    url: "http://www.blogger.com/profile/05356031750889872461?rel=author"
-    image: "http://img2.blogblog.com/img/b16-rounded.gif"
 comments: true
 ---
 
