@@ -14,4 +14,4 @@ I found out about Linux while I was still in high school and I've been using it 
 
 I enjoy coding and system administration. My favorite tool is git. My favorite type of projects are software infrastructure projects, setting up the systems and tooling needed to ease the task of writing and deploying software, managing servers, workstations, and services, or writing custom libraries for specific business needs.
 
-I find repetitive tasks tedious and boring, and it makes me happy when I can automate them, especially if it relieves someone of their drudge work. I also enjoy a challenge that engages me in the creative process of designing new or replacement systems.
+It makes me happy when I can automate repetitive tasks, especially if it relieves someone of their drudge work. I also enjoy a challenge that engages me in the creative process of designing new or replacement systems.
