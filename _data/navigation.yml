@@ -3,4 +3,4 @@ main:
    - title: "About"
      url: "/about/"
    - title: "Resume"
-     url: "/resume.pdf"
+     url: "/resume.html"
