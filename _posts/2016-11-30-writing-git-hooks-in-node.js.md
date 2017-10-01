@@ -51,7 +51,13 @@ I prefer to test my scripts on the command line. I also find it helpful to be ab
 {% endhighlight %}
 
 {% highlight javascript %}
+const readline = require( 'readline' );
 const program = require( 'commander' );
+
+const rl = readline.createInterface( {
+    input:  process.stdin,
+    output: process.stdout,
+} );
 
 program
     .description( 'git post-receive hook' )
