@@ -1,212 +1,184 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Brian Milco - Resume</title>
-    <meta content="">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <head>
+    <title>Resume for Brian Milco</title>
     <style>
         body {
-            font-family: 'Droid Sans', sans-serif;
-            font-size: 1em;
+          font-family: Ubuntu, sans-serif;
         }
-        a {
-            color: #4471aa;
+
+        #header {
+          background-color: #4471aa;
+          color: white;
+          border-radius: 1.5em 1.5em 0.3em 0.3em;
+          overflow: auto;
+          display: flex;
+          flex-direction: row;
         }
-        /*h1 {
-            font-size: 2.5em;
+        #header a {
+          color: white;
         }
-        h2 {
-            font-size: 2em;
-        }*/
-        h3 {
-            font-weight: bold;
+        .header-left {
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 0 3em;
+          width: -webkit-fill-available;
         }
-        .contact-info {
-            background-color: #4471aa;
-            color: white;
-            border-radius: 25px 25px 5px 5px;
-            padding: 1em;
+        .header-top {
+          font-size: 3em;
+          height: fit-content;
+          display: inline-block;
         }
-        .contact-info h1 {
-            text-align: center;
-            margin: 0;
+        .header-bottom {
+          display: flex;
+          flex-direction: row;
+          flex-flow: row wrap;
+          justify-content: flex-end;
         }
-        .left-header {
-            display: none;
-            /*float: left;
-            width: 205px;
-            margin-left: 20px;*/
+        .header-bottom div {
+          display: inline-flex;
+          margin: 1.25em 1em 0 0;
         }
-        .center-header {
-            /*float: left;
-            width: calc( 100% - 450px );*/
-            width: 100%;
+        img {
+          margin-right: 1.5em;
+          border-top: 1px black solid;
+          border-bottom: 1px black solid;
         }
-        .right-header {
-            display: none;
-            /*float: right;
-            width: 205px;
-            margin-right: 20px;
-            text-align: right;*/
-        }
-        .qrcode {
-            float: right;
-            /*width: 100px;
-            margin-right: 10px;*/
-        }
-        .contact-info label {
-            width: 60px;
-            display: inline-block;
-            text-align: right;
-            margin-right: 10px;
-        }
-        .contact-info a {
-            color: white;
-        }
-        .clear-float {
-            clear: both;
+        .body-profile {
+          font-style: italic;
+          padding: 1.25em 2em;
+          text-align: justify;
         }
         .section-header {
-            margin: 0.5em 0.25em;
+          font-size: 1.3em;
+          font-weight: bold;
+          padding-left: 0.75em;
         }
-        .section-content {
-            margin-left: 2em;
+        .section-body {
+          padding: 1em 0 2em 2em;
+        }
+        .job:not(:last-child) {
+          padding-bottom: 1em;
         }
         .job-title {
-            margin: 0;
+          font-size: 1.1em;
+          font-weight: bold;
         }
-        .job-dates,
         .job-company {
-            display: block;
-            margin-left: 0em;
+          font-size: 0.9em;
+          font-style: italic;
+          padding: 0 1em;
         }
         .job-dates {
-            margin-bottom: 0em;
-        }
-        .job-company {
-            font-style: italic;
+          font-size: 0.9em;
+          padding: 0 1em;
         }
         .job-description {
-            margin: 1em 1em;
+          font-size: 1em;
+          text-align: justify;
+          padding: 0 1.75em;
         }
-
-        /*@media (max-width: 750px) {
-            .left-header {
-                display: none;
-            }
-            .center-header {
-                width: 100%;
-            }
-            .right-header {
-                display: none;
-            }
-
-
-        }*/
     </style>
-</head>
-<body>
-    <div class="contact-info">
-        <div class="left-header">
-            <span class="address-block">48 Artesia Dr.</span><br>
-            <span>Chico, CA 95973</span><br>
-            <a href="tel:530.519.9756">530.519.9756</a>
+  </head>
+  <body>
+    <div id="header">
+        <div class="header-left">
+          <div class="header-top">
+            <div class="header-name">Brian C Milco</div>
+          </div>
+          <div class="header-bottom">
+            <div class="header-phone"><a href="tel:530.519.9756">530&bull;519&bull;9756</a></div>
+            <div class="header-email"><a href="mailto:brian@milco.info">brian@milco.info</a></div>
+            <div class="header-url"><a href="https://ipenguin.ws">iPenguin.ws</a></div>
+            <div class="header-github"><a href="https://github.com/iPenguin">github.com/iPenguin</a></div>
+          </div>
         </div>
-        <div class="center-header">
-            <h1>Brian C Milco</h1>
+        <img src="/images/qrcode.png" />
+    </div>
+    <div id="body">
+      <div class="body-profile">
+        An IT professional with 15 years of experience developing software and maintaining servers in a professional capacity. Able to pick up new software, technologies, and programming languages quickly. Self-motivated with a track record of successfully completing projects and bringing products to market.
+      </div>
+      <div class="body-section">
+        <div class="section-header">Experience</div>
+        <div class="section-body">
+          <div class="job">
+            <div>
+              <div class="job-title">Chief Technology Officer</div>
+              <div class="job-company">Plumbing Supply Group, LLC - Chico, CA</div>
+              <div class="job-dates">Jan 2019 - Present</div>
+              <div class="job-description">Supervised a department of 6 employees. Responsible for maintenance of CentOS 7 servers to meet PCI-DSS standards. Promoted more automation by increasing use of Ansible, and introducing Docker into the toolkit. Oversaw and maintained all other aspects of IT operations at the company.</div>
+            </div>
+          </div>
+          <div class="job">
+            <div class="job-title">Application Developer / Linux Administrator</div>
+            <div class="job-company">Plumbing Supply Group, LLC; Chico, CA</div>
+            <div class="job-dates">May 2014 - Jan 2019</div>
+            <div class="job-description">Helped convert internal order management system from C++ to Perl back end, JavaScript (with WebSockets), jQuery, HTML, and CSS front end. Helped manage multiple active websites and day-to-day operations of dedicated and virtual servers, both local and remote. Consolidated, automated, and secured new backup server using rsync, ssh, and GPG. Converted all SVN code repositories to git. Converted the website deployment script from custom FTP upload to git over SSH. Proposed, developed, and deployed more than a dozen Raspberry Pi's as kiosk workstations. Converted main e-Commerce site from Apache to nginx. Helped support 30 end users. (Development 60% / IT 40%)</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Small Business Owner / Software Developer</div>
+            <div class="job-company">Stitch Works Software; Chico, CA</div>
+            <div class="job-dates">Jan 2011 - Dec 2014</div>
+            <div class="job-description">Developed Crochet Charts (symbol crochet design software) using C++/Qt for Windows, Mac, Linux. Set up and maintained Drupal-based website and store. Supported customers via phone, email, web forum, and social media. Used git as a VCS and cmake for the build process. Also sold through the Apple App Store.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Mailroom Manager</div>
+            <div class="job-company">Cedar Creek Publishing; Paradise, CA</div>
+            <div class="job-dates">Feb 2012 - May 2014</div>
+            <div class="job-description">Managed the production schedule, and daily operations. Managed a technology and software transition to support the new Intelligent Mail bar codes. Established and documented standard operating procedures.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Application & Database Developer</div>
+            <div class="job-company">Favor Software; Chico, CA</div>
+            <div class="job-dates">Sept 2006 - Dec 2010</div>
+            <div class="job-description">Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows and Mac. Designed and maintained Microsoft Access databases for business customers. Transitioned from Access to mySQL database back ends for several customers. Supported customers via phone, email, and web forum. Maintained local server and backup systems.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Website Developer</div>
+            <div class="job-company">OptiLife Administrators; Chico, CA</div>
+            <div class="job-dates">May 2005 - Sept 2006</div>
+            <div class="job-description">Modified and maintained custom ASP-based website and reports created in Crystal Reports. Maintained Windows 2000 Servers. Supported end users.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Interim Systems Administrator</div>
+            <div class="job-company">Butte Community College: Center for Information Technology (CIT); Chico, CA</div>
+            <div class="job-dates">Jun 2002 - May 2003</div>
+            <div class="job-description">Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) based systems and network services. Maintained accounts for students and teachers. Kept software and services up-to-date and patched. Worked with Solaris thin clients, and Windows Terminal servers. Student position.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Bulk Mailing / Filemaker Database Designer</div>
+            <div class="job-company">Ceder Creek Publishing; Paradise, CA</div>
+            <div class="job-dates">Dec 2001 - Apr 2006</div>
+            <div class="job-description">Set up and sent out bulk mailings. Developed several Filemaker databases. Added new computers and printers to existing network. Contract work.</div>
+          </div>
+          <div class="job">
+            <div class="job-title">Information Systems Analyst</div>
+            <div class="job-company">Merchandise Testing Labs (MTL) USA; Brockton, MA</div>
+            <div class="job-dates">Jun 2001 - Nov 2001</div>
+            <div class="job-description">Provided troubleshooting and support for 120+ employees. Developed and administrated Filemaker databases. Set up, installed, and replaced more than 50 workstations using Ghost.</div>
+          </div>
         </div>
-        <div class="right-header">
-            <a href="mailto:brian@milco.info">brian@milco.info</a><br>
-            <a href="http://brian.milco.info">brian.milco.info</a><br>
-            <a href="https://github.com/iPenguin">github.com/iPenguin</a>
+      </div>
+      <div class="body-section">
+        <div class="section-header">Personal Qualities</div>
+        <div class="section-body">
+          Self learner, highly self motivated, reliable, good at multi-tasking, good interpersonal skills, detail oriented.
         </div>
+      </div>
+      <div class="body-section">
+        <div class="section-header">Traditional Education</div>
+        <div class="section-body">
+          Some college (Computer Science) - Butte College.
+        </div>
+      </div>
 
-        <div class="clear-float"></div>
+      <div class="body-section">
+        <div class="section-header">References</div>
+        <div class="section-body">
+          References upon request.
+        </div>
+      </div>
     </div>
-<!--    <div class="qrcode">
-        <img src="qrcode.png">
-    </div>
--->
-    <h2 class="section-header">Profile</h2>
-
-    <div class="section-content">
-        <p>An IT professional with almost 15 years of experience developing software and maintaining servers in a professional capacity.
-        Able to pick up new software, technologies, and programming languages quickly.
-        Self-motivated with a track record of successfully completing projects and bringing products to market.</p>
-        <p></p>
-    </div>
-
-    <h2 class="section-header">Experience</h2>
-
-    <div class="section-content">
-        <h3 class="job-title">Chief Technology Officer (CTO)</h3>
-        <span class="job-dates">Jan 2019 - Present</span>
-        <span class="job-company">Plumbing Supply Group, LLC; Chico, CA</span>
-        <p class="job-description">Supervise a department of 6 employees. Responsible for maintenance of CentOS 7 servers to meet PCI-DSS standards.
-          Responsible for a technology transition from an in-house system to Magento 2. Oversee and maintain all other aspects of IT operations at the company.
-        </p>
-
-        <h3 class="job-title">Application Developer / Linux Administrator</h3>
-        <span class="job-dates">May 2014 - Jan 2019</span>
-        <span class="job-company">Plumbing Supply Group, LLC; Chico, CA</span>
-        <p class="job-description">Helped convert internal order management system from C++ to Perl back end, JavaScript (with WebSockets), jQuery, HTML, and CSS front end.
- Helped manage day to day operations of dedicated and virtual servers, both local and remote. Helped manage multiple active websites. Consolidated, automated, and secured new backup server using rsync, ssh, and GPG. Converted all SVN code repositories to git. Converted the website deployment script from custom FTP upload to git over SSH. Proposed, developed, and deployed more than a dozen Raspberry Pi's as kiosk workstations. Converted main e-Commerce site from Apache to nginx. Helped support 30 end users. (Development 60% / IT 40%)</p>
-
-        <h3 class="job-title">Owner / Application Developer</h3>
-        <span class="job-dates">Jan 2011 - Dec 2014</span>
-        <span class="job-company">Stitch Works Software; Chico, CA</span>
-
-        <p class="job-description">Developed Crochet Charts (symbol crochet design software) using C++/Qt for Windows, Mac, and Linux. Setup and maintained Drupal based website and store. Supported customers via phone, email, web forum, and social media. Used git as a VCS and cmake for the build process. Sold the software through my website and through the Apple OS X App Store.</p>
-
-        <h3 class="job-title">Mailroom Manager</h3>
-        <span class="job-dates">Feb 2012 - May 2014</span>
-        <span class="job-company">Cedar Creek Publishing; Paradise, CA</span>
-
-        <p class="job-description">Managed the production schedule and daily operations. Managed a technology and software transition to support the new Intelligent Mail bar codes. Established and documented standard operating procedures.</p>
-
-        <h3 class="job-title">Application and Database Developer</h3>
-        <span class="job-dates">Sept 2006 - Dec 2010</span>
-        <span class="job-company">Favor Software; Chico, CA</span>
-
-        <p class="job-description">Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows and Mac. Designed and maintained Microsoft Access databases for business customers. Transitioned several customers from Access to mySQL database back ends. Supported customers via phone, email, and web forum. Maintained local server and backup systems.</p>
-
-        <h3 class="job-title">Website Developer</h3>
-        <span class="job-dates">May 2005 - Sept 2006</span>
-        <span class="job-company">OptiLife Administrators; Chico, CA</span>
-
-        <p class="job-description">Modified and maintained custom ASP based website used by local agents, and created reports for third party software in Crystal Reports. Maintained Windows 2000 Servers and tape backups. Supported about 12 end users.</p>
-
-        <h3 class="job-title">Interim System Administrator</h3>
-        <span class="job-dates">Jun 2002 - May 2003</span>
-        <span class="job-company">Butte Community College: Center for Information Technology (CIT); Chico, CA</span>
-
-        <p class="job-description">Student position. Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) based systems and network services. Maintained accounts for students and teachers. Kept software and services up-to-date and patched. Worked with Solaris thin clients, and Windows Terminal servers.</p>
-
-        <h3 class="job-title">Bulk Mailing/Filemaker Database Developer</h3>
-        <span class="job-dates">Dec 2001 - Apr 2006</span>
-        <span class="job-company">Ceder Creek Publishing; Paradise, CA</span>
-
-        <p class="job-description">Contract work. Set up and sent out bulk mailings. Developed several small Filemaker databases. Added new computers and printers to existing network.</p>
-
-        <h3 class="job-title">Information Systems Analyst</h3>
-        <span class="job-dates">Jun 2001 - Nov 2001</span>
-        <span class="job-company">Merchandise Testing Labs (MTL) USA; Brockton, MA</span>
-
-        <p class="job-description">Provided troubleshooting and support for 120+ employees. Developed and administrated Filemaker databases. Set up, installed and replaced more than 50 workstations using Ghost.</p>
-    </div>
-
-    <h2 class="section-header">Personal Qualities</h2>
-    <div class="section-content">
-        Self learner, highly self-motivated, reliable, effective at multi-tasking, strong interpersonal skills, ability to identify and utilize strengths of others, detail oriented
-    </div>
-
-    <h2 class="section-header">Traditional Education</h2>
-    <div class="section-content">
-        Some college (Computer Science) - Butte College
-    </div>
-
-    <h2 class="section-header">References</h2>
-    <div class="section-content">
-        References upon request.
-    </div>
-</body>
+  </body>
 </html>
