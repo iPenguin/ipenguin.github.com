@@ -7,7 +7,7 @@
           font-family: Ubuntu, sans-serif;
         }
 
-        #header {
+        header {
           background-color: #4471aa;
           color: white;
           border-radius: 1.5em 1.5em 0.3em 0.3em;
@@ -15,7 +15,10 @@
           display: flex;
           flex-direction: row;
         }
-        #header a {
+        header h1 {
+          margin: 0;
+        }
+        header a {
           color: white;
         }
         .header-left {
@@ -35,30 +38,27 @@
         .header-links a {
           margin: 1.25em 1em 0 0;
         }
-        img {
+        header img {
           margin-right: 1.5em;
-          border-top: 1px black solid;
-          border-bottom: 1px black solid;
+          border-top: 1px #4471aa solid;
+          border-bottom: 1px #4471aa solid;
         }
         .body-profile {
           font-style: italic;
           padding: 1.25em 2em;
           text-align: justify;
         }
-        .section-header {
-          font-size: 1.7em;
-          font-weight: bold;
-          padding-left: 0.75em;
+        .resume-section h2 {
+          margin: 0;
         }
         .section-body {
           padding: 1em 0 2em 2em;
         }
+        .job h3 {
+          margin: 0;
+        }
         .job:not(:last-child) {
           padding-bottom: 1em;
-        }
-        .job-title {
-          font-size: 1.2em;
-          font-weight: bold;
         }
         .job-company {
           font-size: 0.9em;
@@ -89,11 +89,9 @@
         .cert-body {
         }
         .cert {
-          /* display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          align-items: flex-start; */
+        }
+        .cert h3 {
+          margin: 0;
         }
         .cert:not(:last-child) {
             padding-bottom: 1em;
@@ -138,7 +136,7 @@
     </style>
   </head>
   <body>
-    <div id="header">
+    <header>
         <div class="header-left">
           <h1>Brian C Milco</h1>
           <div class="header-links">
@@ -152,22 +150,20 @@
             </div>
           </div>
         </div>
-        <img src="/assets/images/qrcode.png" />
-    </div>
+        <img src="/assets/images/qrcode.png">
+    </header>
     <div id="body">
       <div class="body-profile">
         An IT professional with 15 years of experience developing software and maintaining servers in a professional capacity. Able to pick up new software, technologies, and programming languages quickly. Self-motivated with a track record of successfully completing projects and bringing products to market.
       </div>
-      <div class="body-section">
+      <div class="resume-section">
         <h2>Experience</h2>
         <div class="section-body">
           <div class="job">
-            <div>
-              <h3>Chief Technology Officer</h3>
-              <div class="job-company">Plumbing Supply Group, LLC - Chico, CA</div>
-              <div class="job-dates">Jan 2019 - Present</div>
-              <div class="job-description">Supervised a department of 3 direct report and 5 indirect report employees. Responsible for maintenance of CentOS 7 servers to meet PCI-DSS standards. Promoted more automation by increasing use of Ansible, and introducing Docker into the toolkit. Oversaw and maintained all other aspects of IT operations at the company.</div>
-            </div>
+            <h3>Chief Technology Officer</h3>
+            <div class="job-company">Plumbing Supply Group, LLC - Chico, CA</div>
+            <div class="job-dates">Jan 2019 - Present</div>
+            <div class="job-description">Supervised a department of 3 direct report and 5 indirect report employees. Responsible for maintenance of CentOS 7 servers to meet PCI-DSS standards. Promoted more automation by increasing use of Ansible, and introducing Docker into the toolkit. Oversaw and maintained all other aspects of IT operations at the company.</div>
           </div>
           <div class="job">
             <h3>Application Developer / Linux Administrator</h3>
@@ -176,7 +172,7 @@
             <div class="job-description">Helped convert internal order management system from C++ to Perl back end, JavaScript (with WebSockets), jQuery, HTML, and CSS front end. Helped manage multiple active websites and day-to-day operations of dedicated and virtual servers, both local and remote. Consolidated, automated, and secured new backup server using rsync, ssh, and GPG. Converted all SVN code repositories to git. Converted the website deployment script from custom FTP upload to git over SSH. Proposed, developed, and deployed more than a dozen Raspberry Pi's as kiosk workstations. Converted main e-Commerce site from Apache to nginx. Helped support 30 end users. (Development 60% / IT 40%)</div>
           </div>
           <div class="job">
-            <div class="job-title">Small Business Owner / Software Developer</div>
+            <h3>Small Business Owner / Software Developer</h3>
             <div class="job-company">Stitch Works Software; Chico, CA</div>
             <div class="job-dates">Jan 2011 - Dec 2014</div>
             <div class="job-description">Developed Crochet Charts (symbol crochet design software) using C++/Qt for Windows, Mac, Linux. Set up and maintained Drupal-based website and store. Supported customers via phone, email, web forum, and social media. Used git as a VCS and cmake for the build process. Also sold through the Apple App Store.</div>
@@ -188,7 +184,7 @@
             <div class="job-description">Managed the production schedule, and daily operations. Managed a technology and software transition to support the new Intelligent Mail bar codes. Established and documented standard operating procedures.</div>
           </div>
           <div class="job">
-            <div class="job-title">Application &amp; Database Developer</div>
+            <h3>Application &amp; Database Developer</h3>
             <div class="job-company">Favor Software; Chico, CA</div>
             <div class="job-dates">Sept 2006 - Dec 2010</div>
             <div class="job-description">Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows and Mac. Designed and maintained Microsoft Access databases for business customers. Transitioned from Access to mySQL database back ends for several customers. Supported customers via phone, email, and web forum. Maintained local server and backup systems.</div>
@@ -220,7 +216,7 @@
         </div>
       </div>
 
-      <div class="body-section">
+      <div class="resume-section">
         <h2>Certifications</h2>
         <div class="section-body">
           <div class="cert">
@@ -272,21 +268,21 @@
         </div>
       </div>
 
-      <div class="body-section">
+      <div class="resume-section">
         <h2>Personal Qualities</h2>
         <div class="section-body">
           Self learner, highly self motivated, reliable, good at multi-tasking, good interpersonal skills, detail oriented.
         </div>
       </div>
 
-      <div class="body-section">
+      <div class="resume-section">
         <h2>Traditional Education</h2>
         <div class="section-body">
           Some college (Computer Science) - Butte College.
         </div>
       </div>
 
-      <div class="body-section">
+      <div class="resume-section">
         <h2>References</h2>
         <div class="section-body">
           References upon request.
