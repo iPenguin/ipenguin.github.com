@@ -51,7 +51,7 @@
           text-align: justify;
         }
         .section-header {
-          font-size: 1.3em;
+          font-size: 1.7em;
           font-weight: bold;
           padding-left: 0.75em;
         }
@@ -62,7 +62,7 @@
           padding-bottom: 1em;
         }
         .job-title {
-          font-size: 1.1em;
+          font-size: 1.2em;
           font-weight: bold;
         }
         .job-company {
@@ -78,6 +78,35 @@
           font-size: 1em;
           text-align: justify;
           padding: 0 1.75em;
+        }
+        
+        .cert-break {
+          clear: both;
+          margin-bottom: 1em;
+        }
+        .cert img {
+          float: left;
+          border: none;
+          max-height: 50px;
+          width: 50px
+        }
+        .cert-body {
+          float: left;
+        }
+        .cert-title {
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+        .cert-id a {
+          color: #4471aa;
+        }
+        .cert-dates {
+          font-size: 1em;
+          float: left;
+          margin-right: 4em;
+        }
+        .cert-description {
+          float: left;
         }
     </style>
   </head>
@@ -130,7 +159,7 @@
             <div class="job-description">Managed the production schedule, and daily operations. Managed a technology and software transition to support the new Intelligent Mail bar codes. Established and documented standard operating procedures.</div>
           </div>
           <div class="job">
-            <div class="job-title">Application & Database Developer</div>
+            <div class="job-title">Application &amp; Database Developer</div>
             <div class="job-company">Favor Software; Chico, CA</div>
             <div class="job-dates">Sept 2006 - Dec 2010</div>
             <div class="job-description">Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows and Mac. Designed and maintained Microsoft Access databases for business customers. Transitioned from Access to mySQL database back ends for several customers. Supported customers via phone, email, and web forum. Maintained local server and backup systems.</div>
@@ -145,13 +174,13 @@
             <div class="job-title">Interim Systems Administrator</div>
             <div class="job-company">Butte Community College: Center for Information Technology (CIT); Chico, CA</div>
             <div class="job-dates">Jun 2002 - May 2003</div>
-            <div class="job-description">Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) based systems and network services. Maintained accounts for students and teachers. Kept software and services up-to-date and patched. Worked with Solaris thin clients, and Windows Terminal servers. Student position.</div>
+            <div class="job-description">Student position. Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) based systems and network services. Maintained accounts for students and teachers. Kept software and services up-to-date and patched. Worked with Solaris thin clients, and Windows Terminal servers.</div>
           </div>
           <div class="job">
             <div class="job-title">Bulk Mailing / Filemaker Database Designer</div>
             <div class="job-company">Ceder Creek Publishing; Paradise, CA</div>
             <div class="job-dates">Dec 2001 - Apr 2006</div>
-            <div class="job-description">Set up and sent out bulk mailings. Developed several Filemaker databases. Added new computers and printers to existing network. Contract work.</div>
+            <div class="job-description">Contract work. Set up and sent out bulk mailings. Developed several Filemaker databases. Added new computers and printers to existing network.</div>
           </div>
           <div class="job">
             <div class="job-title">Information Systems Analyst</div>
@@ -162,11 +191,72 @@
         </div>
       </div>
       <div class="body-section">
+        <div class="section-header">Certifications</div>
+        <div class="section-body">
+          <div class="cert">
+            <img src="/images/red-hat-sm.png" alt="Red Hat logo">
+            <div class="cert-body">
+                <div class="cert-title">Red Hat Certified System Administrator (RHCSA)</div>
+                <div class="cert-dates">January 2021 - February 2024</div>
+                <div class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
+                <div class="cert-description">This performance-based test focuses on installation and configuration of Red Hat Enterprise Linux 8.</div>
+            </div>
+          </div>
+          <div class="cert-break"></div>
+          
+          <div class="cert">
+            <img src="/images/red-hat-sm.png" alt="Red Hat logo">
+            <div class="cert-body">
+                <div class="cert-title">Red Hat Certified Engineer (RHCE)</div>
+                <div class="cert-dates">February 2021 - February 2024</div>
+                <div class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
+                <div class="cert-description">This performance-based test focuses on using Ansible to automate the configuration of Red Hat Enterprise Linux 8 servers.</div>
+            </div>
+          </div>
+          <div class="cert-break"></div>
+          
+          <div class="cert">
+            <img src="/images/cka-sm.png" alt="Cloud Native Computing Foundation logo">
+            <div class="cert-body">
+                <div class="cert-title">Certified Kubernetes Administrator (CKA)</div>
+                <div class="cert-dates">March 2021 - March 2024</div>
+                <div class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></div>
+                <div class="cert-description">This performance-based test focuses on the skills that are needed to be a successful Kubernetes Administrator.</div>
+            </div>
+          </div>
+          <div class="cert-break"></div>
+          
+          <div class="cert">
+            <img src="/images/jenkins-sm.png" alt="Jenkins logo">
+            <div class="cert-body">
+                <div class="cert-title">Certified Jenkins Engineer 2021 (CJE)</div>
+                <div class="cert-dates">From April 2021</div>
+                <div class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></div>
+                <div class="cert-description">This test focuses on basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing pipelines in Jenkins.</div>
+            </div>
+          </div>
+          <div class="cert-break"></div>
+          
+          <div class="cert">
+            <img src="/images/elasticsearch-sm.png" alt="Elasticsearch logo">
+            <div class="cert-body">
+                <div class="cert-title">Elastic Certified Engineer (ECE)</div>
+                <div class="cert-dates">Currently studying for exam</div>
+                <div class="cert-id"></div>
+                <div class="cert-description">This performance-based test focuses on the skills need to administrate and working with an Elasticsearch cluster.</div>
+            </div>
+          </div>
+          <div class="cert-break"></div>
+        </div>
+      </div>
+      
+      <div class="body-section">
         <div class="section-header">Personal Qualities</div>
         <div class="section-body">
           Self learner, highly self motivated, reliable, good at multi-tasking, good interpersonal skills, detail oriented.
         </div>
       </div>
+      
       <div class="body-section">
         <div class="section-header">Traditional Education</div>
         <div class="section-body">
