@@ -21,7 +21,7 @@
         .header-left {
           display: flex;
           flex-direction: column;
-          margin: 0 0 0 3em;
+          margin: 0 0 0 2em;
           width: -webkit-fill-available;
           width: -moz-available;
         }
@@ -30,14 +30,14 @@
           height: fit-content;
           display: inline-block;
         }
-        .header-bottom {
+        .header-links {
+          margin-top: 1.5em;
           display: flex;
           flex-direction: row;
           flex-flow: row wrap;
           justify-content: flex-end;
         }
-        .header-bottom div {
-          display: inline-flex;
+        .header-links a {
           margin: 1.25em 1em 0 0;
         }
         img {
@@ -79,7 +79,7 @@
           text-align: justify;
           padding: 0 1.75em;
         }
-        
+
         .cert-break {
           clear: both;
           margin-bottom: 1em;
@@ -88,25 +88,57 @@
           float: left;
           border: none;
           max-height: 50px;
-          width: 50px
+          width: 50px;
+          margin-right: 1em;
         }
         .cert-body {
-          float: left;
+        }
+        .cert {
+          /* display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start; */
+        }
+        .cert:not(:last-child) {
+            padding-bottom: 1em;
         }
         .cert-title {
           font-size: 1.2em;
           font-weight: bold;
         }
-        .cert-id a {
+        .cert-title a {
           color: #4471aa;
+          font-size: .9em;
         }
         .cert-dates {
           font-size: 1em;
-          float: left;
-          margin-right: 4em;
         }
-        .cert-description {
-          float: left;
+
+        @media screen and (max-width: 700px ) {
+          .header-links {
+            margin-top: 0em;
+            display: block;
+          }
+          .header-links-col1 {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          .header-links-col2 {
+            float: right;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: flex-end;
+            align-items: flex-end;
+          }
+          .header-links a {
+            margin: 0.25em;
+          }
         }
     </style>
   </head>
@@ -116,11 +148,15 @@
           <div class="header-top">
             <div class="header-name">Brian C Milco</div>
           </div>
-          <div class="header-bottom">
-            <div class="header-phone"><a href="tel:530.519.9756">530&bull;519&bull;9756</a></div>
-            <div class="header-email"><a href="mailto:brian@milco.info">brian@milco.info</a></div>
-            <div class="header-url"><a href="https://ipenguin.ws">iPenguin.ws</a></div>
-            <div class="header-github"><a href="https://github.com/iPenguin">github.com/iPenguin</a></div>
+          <div class="header-links">
+            <div class="header-links-col1">
+              <a href="tel:530.519.9756">530&bull;519&bull;9756</a>
+              <a href="mailto:brian@milco.info">brian@milco.info</a>
+            </div>
+            <div class="header-links-col2">
+              <a href="https://ipenguin.ws">iPenguin.ws</a>
+              <a href="https://github.com/iPenguin">github.com/iPenguin</a>
+            </div>
           </div>
         </div>
         <img src="/assets/images/qrcode.png" />
@@ -190,73 +226,61 @@
           </div>
         </div>
       </div>
+
       <div class="body-section">
         <div class="section-header">Certifications</div>
         <div class="section-body">
           <div class="cert">
-            <img src="/images/red-hat-sm.png" alt="Red Hat logo">
+            <div class="cert-title"><img src="/assets/images/red-hat-sm.png" alt="Red Hat logo"> Red Hat Certified System Administrator (RHCSA)</div>
             <div class="cert-body">
-                <div class="cert-title">Red Hat Certified System Administrator (RHCSA)</div>
-                <div class="cert-dates">January 2021 - February 2024</div>
-                <div class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
-                <div class="cert-description">This performance-based test focuses on installation and configuration of Red Hat Enterprise Linux 8.</div>
+              <div class="cert-id">Verification link: <a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
+              <div class="cert-dates">January 2021 - February 2024</div>
+              <div class="cert-description">This performance-based test focuses on installation and configuration of Red Hat Enterprise Linux 8.</div>
             </div>
           </div>
           <div class="cert-break"></div>
-          
+
           <div class="cert">
-            <img src="/images/red-hat-sm.png" alt="Red Hat logo">
-            <div class="cert-body">
-                <div class="cert-title">Red Hat Certified Engineer (RHCE)</div>
-                <div class="cert-dates">February 2021 - February 2024</div>
-                <div class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
-                <div class="cert-description">This performance-based test focuses on using Ansible to automate the configuration of Red Hat Enterprise Linux 8 servers.</div>
-            </div>
+            <div class="cert-title"><img src="/assets/images/red-hat-sm.png" alt="Red Hat logo"> Red Hat Certified Engineer (RHCE)</div>
+            <div class="cert-id">Verification link: <a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
+            <div class="cert-dates">February 2021 - February 2024</div>
+            <div class="cert-description">This performance-based test focuses on using Ansible to automate the configuration of Red Hat Enterprise Linux 8 servers.</div>
           </div>
           <div class="cert-break"></div>
-          
+
           <div class="cert">
-            <img src="/images/cka-sm.png" alt="Cloud Native Computing Foundation logo">
-            <div class="cert-body">
-                <div class="cert-title">Certified Kubernetes Administrator (CKA)</div>
-                <div class="cert-dates">March 2021 - March 2024</div>
-                <div class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></div>
-                <div class="cert-description">This performance-based test focuses on the skills that are needed to be a successful Kubernetes Administrator.</div>
-            </div>
+            <div class="cert-title"><img src="/assets/images/cka-sm.png" alt="Cloud Native Computing Foundation logo"> Certified Kubernetes Administrator (CKA)</div>
+            <div class="cert-id">Verification link: <a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></div>
+            <div class="cert-dates">March 2021 - March 2024</div>
+            <div class="cert-description">This performance-based test focuses on the skills that are needed to be a successful Kubernetes Administrator.</div>
           </div>
           <div class="cert-break"></div>
-          
+
           <div class="cert">
-            <img src="/images/jenkins-sm.png" alt="Jenkins logo">
-            <div class="cert-body">
-                <div class="cert-title">Certified Jenkins Engineer 2021 (CJE)</div>
-                <div class="cert-dates">From April 2021</div>
-                <div class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></div>
-                <div class="cert-description">This test focuses on basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing pipelines in Jenkins.</div>
-            </div>
+            <div class="cert-title"><img src="/assets/images/jenkins-sm.png" alt="Jenkins logo"> Certified Jenkins Engineer 2021 (CJE)</div>
+            <div class="cert-id">Verification link: <a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></div>
+            <div class="cert-dates">From April 2021</div>
+            <div class="cert-description">This test focuses on basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing pipelines in Jenkins.</div>
           </div>
           <div class="cert-break"></div>
-          
+
           <div class="cert">
-            <img src="/images/elasticsearch-sm.png" alt="Elasticsearch logo">
-            <div class="cert-body">
-                <div class="cert-title">Elastic Certified Engineer (ECE)</div>
-                <div class="cert-dates">Currently studying for exam</div>
-                <div class="cert-id"></div>
-                <div class="cert-description">This performance-based test focuses on the skills need to administrate and working with an Elasticsearch cluster.</div>
-            </div>
+            <div class="cert-title"><img src="/assets/images/elasticsearch-sm.png" alt="Elasticsearch logo"> Elastic Certified Engineer (ECE)</div>
+            <div class="cert-id">Verification link:  <a href=""></a></div>
+            <div class="cert-dates">Currently studying for exam</div>
+            <div class="cert-description">This performance-based test focuses on the skills need to administrate and working with an Elasticsearch cluster.</div>
           </div>
           <div class="cert-break"></div>
         </div>
       </div>
-      
+
       <div class="body-section">
         <div class="section-header">Personal Qualities</div>
         <div class="section-body">
           Self learner, highly self motivated, reliable, good at multi-tasking, good interpersonal skills, detail oriented.
         </div>
       </div>
-      
+
       <div class="body-section">
         <div class="section-header">Traditional Education</div>
         <div class="section-body">
