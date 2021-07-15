@@ -5,7 +5,7 @@ uuid: "5201424067889033394"
 guid: "tag:blogger.com,1999:blog-3270817893928434685.post-5201424067889033394"
 date: "2012-11-26 17:00:00"
 updated: "2012-11-26 17:00:08"
-excert: "Using cmake to generate docbooks files into platform specific documentation"
+excerpt: "Using cmake to generate docbooks files into platform specific documentation"
 blogger:
     siteid: "3270817893928434685"
     postid: "5201424067889033394"
