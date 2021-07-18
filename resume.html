@@ -2,290 +2,262 @@
 <html>
   <head>
     <title>Brian Milco's Resume</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic">
     <style>
         body {
-          font-family: Ubuntu, sans-serif;
+          font-family: "PT Sans",-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+          line-height: 1.5;
         }
-
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "PT Sans Narrow","PT Sans",-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+          font-weight: bold;
+          line-height: 1.2;
+          margin: 0.5em 0 0.5em;
+        }
         header {
-          background-color: #4471aa;
-          color: white;
-          border-radius: 1.5em 1.5em 0.3em 0.3em;
-          overflow: auto;
-          display: flex;
-          flex-direction: row;
+          width: 100%;
+          text-align: center;
         }
-        header h1 {
+        header h2 {
+          color: #1A76C8;
+          font-size: 2.5em;
           margin: 0;
         }
-        header a {
-          color: white;
+        a {
+          color: #C76A1A;
         }
-        .header-left {
-          display: flex;
-          flex-direction: column;
-          margin: 0 0 0 2em;
-          width: -webkit-fill-available;
-          width: -moz-available;
+        hr {
+          border-color: #1A76C8;
+          border-style: solid;
+          margin-top: 0;
         }
-        .header-links {
-          margin-top: 1.5em;
-          display: flex;
-          flex-direction: row;
-          flex-flow: row wrap;
-          justify-content: flex-end;
-        }
-        .header-links a {
-          margin: 1.25em 1em 0 0;
-        }
-        header img {
-          margin-right: 1.5em;
-          border-top: 1px #4471aa solid;
-          border-bottom: 1px #4471aa solid;
-        }
-        .body-profile {
-          font-style: italic;
-          padding: 1.25em 2em;
-          text-align: justify;
-        }
-        .resume-section h2 {
-          margin: 0;
+        .resume-section h3 {
+          margin-bottom: 0;
         }
         .section-body {
-          padding: 1em 0 2em 2em;
+          margin-left: 1em;
         }
-        .job h3 {
-          margin: 0;
+        .section-body p:not(:first-child) {
+          margin-top: 0;
         }
-        .job:not(:last-child) {
-          padding-bottom: 1em;
+        .section-body p {
+          margin-bottom: 0;
+        }
+        
+        .job {
+          margin-top: 0.5em;
         }
         .job-company {
-          font-size: 0.9em;
-          font-style: italic;
-          padding: 0 1em;
-        }
-        .job-dates {
-          font-size: 0.9em;
-          padding: 0 1em;
-        }
-        .job-description {
-          font-size: 1em;
-          text-align: justify;
-          padding: 0 1.75em;
-        }
-
-        .cert-break {
-          clear: both;
-          margin-bottom: 1em;
-        }
-        .cert img {
-          float: left;
-          border: none;
-          max-height: 50px;
-          width: 50px;
-          margin-right: 1em;
-        }
-        .cert-body {
-        }
-        .cert {
-        }
-        .cert h3 {
-          margin: 0;
-        }
-        .cert:not(:last-child) {
-            padding-bottom: 1em;
-        }
-        .cert-title {
-          font-size: 1.2em;
           font-weight: bold;
         }
-        .cert-title a {
-          color: #4471aa;
-          font-size: .9em;
+        .job-location {
+          font-weight: normal;
+          font-size: small;
         }
-        .cert-dates {
-          font-size: 1em;
+        .job-title {
+          font-style: italic;
+        }
+        .job-description {
+          margin-left: 1em;
+        }
+        .job-description p {
+          margin-top: 0.5em;
+        }
+        .job-description ul {
+          margin: 0.5em;
+          padding-left: 2em;
+        }
+        
+        .cert-title {
+          font-weight: bold;
+          margin-top: 0.5em;
         }
 
         @media screen and (max-width: 700px ) {
-          .header-links {
-            margin-top: 0em;
-            display: block;
-          }
-          .header-links-col1 {
-            float: left;
-            display: flex;
-            flex-direction: column;
-            align-content: flex-start;
-            justify-content: flex-start;
-            align-items: flex-start;
-          }
-          .header-links-col2 {
-            float: right;
-            display: flex;
-            flex-direction: column;
-            align-content: flex-end;
-            justify-content: flex-end;
-            align-items: flex-end;
-          }
-          .header-links a {
-            margin: 0.25em;
-          }
         }
     </style>
   </head>
   <body>
     <header>
-        <div class="header-left">
-          <h1>Brian C Milco</h1>
-          <div class="header-links">
-            <div class="header-links-col1">
-              <a href="tel:530.519.9756">530&bull;519&bull;9756</a>
-              <a href="mailto:brian@milco.info">brian@milco.info</a>
+        <h2>Brian C Milco</h2>
+        <div class="header-links">
+            <div class="header-links-contact">
+                <a href="tel:15305199756">+1 530 519 9756</a> | <a href="mailto:brian@milco.info">brian@milco.info</a>
             </div>
-            <div class="header-links-col2">
-              <a href="https://ipenguin.ws">iPenguin.ws</a>
-              <a href="https://github.com/iPenguin">github.com/iPenguin</a>
+            <div class="header-links-social">
+                <a href="https://ipenguin.ws">Website</a> | <a href="https://github.com/iPenguin">GitHub</a> | <a href="https://www.linkedin.com/in/brian-milco-863b17168">LinkedIn</a>
             </div>
-          </div>
         </div>
-        <img src="/assets/images/qrcode.png">
     </header>
     <div id="body">
-      <div class="body-profile">
-        An IT professional with 15 years of experience developing software and maintaining servers. Excited by a good challenge and inspired to leverage new technologies to eliminate repetitive tasks through automation. Seeking to offer my experience and energy to an organization that can utilize my skills while encouraging growth.
-      </div>
-      <div class="resume-section">
-        <h2>Experience</h2>
+      <div class="resume-section about-me">
+        <h3>About Me</h3>
+        <hr>
         <div class="section-body">
-          <div class="job">
-            <h3>Chief Technology Officer</h3>
-            <div class="job-company">Plumbing Supply Group, LLC - Chico, CA</div>
-            <div class="job-dates">Jan 2019 - Oct 2020</div>
-            <div class="job-description">Supervised a department of 3 direct report and 5 indirect report employees. Responsible for maintenance of CentOS 7 servers to meet PCI-DSS standards. Promoted more automation by increasing use of Ansible, and introducing Docker into the toolkit. Oversaw and maintained all other aspects of IT operations at the company.</div>
-          </div>
-          <div class="job">
-            <h3>Application Developer / Linux Administrator</h3>
-            <div class="job-company">Plumbing Supply Group, LLC; Chico, CA</div>
-            <div class="job-dates">May 2014 - Jan 2019</div>
-            <div class="job-description">Helped convert internal order management system from C++ to Perl back end, JavaScript (with WebSockets), jQuery, HTML, and CSS front end. Helped manage multiple active websites and day-to-day operations of dedicated and virtual servers, both local and remote. Consolidated, automated, and secured new backup server using rsync, ssh, and GPG. Converted all SVN code repositories to git. Converted the website deployment script from custom FTP upload to git over SSH. Proposed, developed, and deployed more than a dozen Raspberry Pi's as kiosk workstations. Converted main e-Commerce site from Apache to nginx. Helped support 30 end users. (Development 60% / IT 40%)</div>
-          </div>
-          <div class="job">
-            <h3>Small Business Owner / Software Developer</h3>
-            <div class="job-company">Stitch Works Software; Chico, CA</div>
-            <div class="job-dates">Jan 2011 - Dec 2014</div>
-            <div class="job-description">Developed Crochet Charts (symbol crochet design software) using C++/Qt for Windows, Mac, Linux. Set up and maintained Drupal-based website and store. Supported customers via phone, email, web forum, and social media. Used git as a VCS and cmake for the build process. Also sold through the Apple App Store.</div>
-          </div>
-          <div class="job">
-            <h3>Mailroom Manager</h3>
-            <div class="job-company">Cedar Creek Publishing; Paradise, CA</div>
-            <div class="job-dates">Feb 2012 - May 2014</div>
-            <div class="job-description">Managed the production schedule, and daily operations. Managed a technology and software transition to support the new Intelligent Mail bar codes. Established and documented standard operating procedures.</div>
-          </div>
-          <div class="job">
-            <h3>Application &amp; Database Developer</h3>
-            <div class="job-company">Favor Software; Chico, CA</div>
-            <div class="job-dates">Sept 2006 - Dec 2010</div>
-            <div class="job-description">Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows and Mac. Designed and maintained Microsoft Access databases for business customers. Transitioned from Access to mySQL database back ends for several customers. Supported customers via phone, email, and web forum. Maintained local server and backup systems.</div>
-          </div>
-          <div class="job">
-            <h3>Website Developer</h3>
-            <div class="job-company">OptiLife Administrators; Chico, CA</div>
-            <div class="job-dates">May 2005 - Sept 2006</div>
-            <div class="job-description">Modified and maintained custom ASP-based website and reports created in Crystal Reports. Maintained Windows 2000 Servers. Supported end users.</div>
-          </div>
-          <div class="job">
-            <h3>Interim Systems Administrator</h3>
-            <div class="job-company">Butte Community College: Center for Information Technology (CIT); Chico, CA</div>
-            <div class="job-dates">Jun 2002 - May 2003</div>
-            <div class="job-description">Student position. Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) based systems and network services. Maintained accounts for students and teachers. Kept software and services up-to-date and patched. Worked with Solaris thin clients, and Windows Terminal servers.</div>
-          </div>
-          <div class="job">
-            <h3>Bulk Mailing / Filemaker Database Designer</h3>
-            <div class="job-company">Ceder Creek Publishing; Paradise, CA</div>
-            <div class="job-dates">Dec 2001 - Apr 2006</div>
-            <div class="job-description">Contract work. Set up and sent out bulk mailings. Developed several Filemaker databases. Added new computers and printers to existing network.</div>
-          </div>
-          <div class="job">
-            <h3>Information Systems Analyst</h3>
-            <div class="job-company">Merchandise Testing Labs (MTL) USA; Brockton, MA</div>
-            <div class="job-dates">Jun 2001 - Nov 2001</div>
-            <div class="job-description">Provided troubleshooting and support for 120+ employees. Developed and administrated Filemaker databases. Set up, installed, and replaced more than 50 workstations using Ghost.</div>
-          </div>
+            <p>I am a creator who has written software that makes work easier.</p>
+            <p>I am a builder who has designed systems that are reliable, stable, and robust.</p>
+            <p>I am a life long learner who figures out what is needed to solve problems.</p>
+            <p>I am a problem solver who learns what is needed to create or build solutions.</p>
         </div>
       </div>
-
       <div class="resume-section">
-        <h2>Certifications</h2>
+        <h3>Skills</h3>
+        <hr>
         <div class="section-body">
-          <div class="cert">
-            <img src="/assets/images/red-hat-sm.png" alt="Red Hat logo">
-            <h3>Red Hat Certified System Administrator (RHCSA)</h3>
-            <div class="cert-body">
-              <div class="cert-id">Verification link: <a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
-              <div class="cert-dates">January 2021 - February 2024</div>
-              <div class="cert-description">This performance-based test focuses on installation and configuration of Red Hat Enterprise Linux 8.</div>
+            <p>Professional: CentOS, Git, SSH, Ansible, JavaScript, Perl, C++, mySQL, Apache, Nginx, Docker, Virtualizaiton, DNS, DHCP, leadship, conflict resolution</p>
+            <p>Personal: Kubernetes, Ansible, Docker, Jenkins, CI/CD, RHEL, Ubuntu</p>
+        </div>
+      </div>
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <hr>
+        <div class="section-body">
+          <div class="job">
+            <div class="job-company">Plumbing Supply Group, LLC; <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Chief Technology Officer, <span class="job-dates">Jan 2019 - Oct 2020</span></div>
+            <div class="job-description">
+              <p>An eCommerce company that specializes in plumbing and related products.</p>
+              <ul>
+                <li>Supervised a department of 3 direct and 5 indirect report employees.</li>
+                <li>Increased Ansible automation and introduced Docker usage for some services.</li>
+                <li>Oversaw managment of multiple active websites and Increased our level of PCI-DSS compliance.</li>
+              </ul>
             </div>
           </div>
-          <div class="cert-break"></div>
-
-          <div class="cert">
-            <img src="/assets/images/red-hat-sm.png" alt="Red Hat logo">
-            <h3>Red Hat Certified Engineer (RHCE)</h3>
-            <div class="cert-id">Verification link: <a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></div>
-            <div class="cert-dates">February 2021 - February 2024</div>
-            <div class="cert-description">This performance-based test focuses on using Ansible to automate the configuration of Red Hat Enterprise Linux 8 servers.</div>
+          <div class="job">
+            <div class="job-company">Plumbing Supply Group, LLC; <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Application Developer / System Administrator, <span class="job-dates">May 2014 - Jan 2019</span></div>
+            <div class="job-description">
+              <ul>
+                <li>Helped convert custom CMS from C++ to Perl &amp; JavaScript (with WebSockets, jQuery, HTML, &amp; CSS).</li>
+                <li>Automated and encrypted the backup process and updated the software stack.</li>
+                <li>Converted SVN code repos to git and updated automated deployment process from FTP to SSH.</li>
+                <li>Replaced a dozen workstations with Raspberry Pi kiosks to lower total cost of owenership.</li>
+                <li>Converted main eCommerce site from Apache to nginx for performance gains.</li>
+              </ul>
+            </div>
           </div>
-          <div class="cert-break"></div>
-
-          <div class="cert">
-            <img src="/assets/images/cka-sm.png" alt="Cloud Native Computing Foundation logo">
-            <h3>Certified Kubernetes Administrator (CKA)</h3>
-            <div class="cert-id">Verification link: <a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></div>
-            <div class="cert-dates">March 2021 - March 2024</div>
-            <div class="cert-description">This performance-based test focuses on the skills that are needed to be a successful Kubernetes Administrator.</div>
+          <div class="job">
+            <div class="job-company">Stitch Works Software; <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Small Business Owner, <span class="job-dates">Jan 2011 - Dec 2014</span></div>
+            <div class="job-description">
+              <p>A company dedicated to crochet symbol design software</p>
+              <ul>
+                <li>Developed Crochet Charts software using C++/Qt for Windows, Mac, and Linux.</li>
+                <li>Set up and maintained Drupal-based website and store front, and sold through the Apple App Store.</li>
+              </ul>
+            </div>
           </div>
-          <div class="cert-break"></div>
-
-          <div class="cert">
-            <img src="/assets/images/jenkins-sm.png" alt="Jenkins logo">
-            <h3>Certified Jenkins Engineer 2021 (CJE)</h3>
-            <div class="cert-id">Verification link: <a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></div>
-            <div class="cert-dates">From April 2021</div>
-            <div class="cert-description">This test focuses on basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing CI/CD pipelines in Jenkins.</div>
+          <div class="job">
+            <div class="job-company">Favor Software; <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Application &amp; Database Developer, <span class="job-dates">Sept 2006 - Dec 2010</span></div>
+            <div class="job-description">
+              <p>A custom software development company specializing in Access databases.<p>
+              <ul>
+                <li>Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows &amp; Mac.</li>
+                <li>Designed and maintained Microsoft Access databases for business customers.</li>
+                <li>Developed and lead the transition of our two largest clients from Access to mySQL backends.</li>
+                <li>Maintained local servers and backup system.</li>
+              </ul>
+            </div>
           </div>
-          <div class="cert-break"></div>
+          <div class="job">
+            <div class="job-company">OptiLife Administrators; <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Website Developer, <span class="job-dates">May 2005 - Sept 2006</span></div>
+            <div class="job-description">
+              <p>A third party administrator of health insurance products.</p>
+              <ul>
+                <li>Modified and maintained custom ASP-based website and reports created in Crystal Reports.</li>
+                <li>Maintained Windows 2000 Servers and about a dozen user workstations.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <div class="job-company">Butte Community College: Center for Information Technology (CIT); <span class="job-location">Chico, CA</span></div>
+            <div class="job-title">Interim Systems Administrator, <span class="job-dates">Jun 2002 - May 2003</span></div>
+            <div class="job-description">
+              <p>A satallite campus for Computer Science courses in Chico. Student position.</p>
+              <ul>
+                <li>Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) systems and services.</li>
+                <li>Maintained accounts for students and teachers.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <div class="job-company">Ceder Creek Publishing; <span class="job-location">Paradise, CA</span></div>
+            <div class="job-title">Bulk Mailing / Filemaker Database Designer, <span class="job-dates">Dec 2001 - Apr 2006</span></div>
+            <div class="job-description">
+              <p>A bulk mailing and marketing company. Contract work.</p>
+              <ul>
+                <li>Set up and sent out bulk mailings.</li>
+                <li>Developed a couple of Filemaker databases.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <div class="job-company">Merchandise Testing Labs (MTL) USA; <span class="job-location">Brockton, MA</span></div>
+            <div class="job-title">Information Systems Analyst, <span class="job-dates">Jun 2001 - Nov 2001</span></div>
+            <div class="job-description">
+            <p>Tested client products to verify they met safety and quality standards.</p>
+            <ul>
+              <li>Supported over 120 employees and replaced more than 50 of their workstations.</li>
+              <li>Developed and administrated Filemaker databases.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <div class="resume-section">
+        <h3>Education</h3>
+        <hr>
+        <div class="section-body">
+          Some college (Computer Science) - Butte College
+        </div>
+      </div>
+      <div class="resume-section">
+        <h3>Certifications</h3>
+        <hr>
+        <div class="section-body">
           <!-- <div class="cert">
-            <img src="/assets/images/elasticsearch-sm.png" alt="Elasticsearch logo">
-            <h3>Elastic Certified Engineer (ECE)</h3>
-            <div class="cert-id">Verification link:  <a href=""></a></div>
-            <div class="cert-dates">Currently studying for exam</div>
+            <div class="cert-title">Elastic Certified Engineer (ECE)</div>
+            <div class="cert-dates">Currently studying for exam; <span class="cert-id">Verify:  <a href=""></a></div></span>
             <div class="cert-description">This performance-based test focuses on the skills need to administrate and work with Elasticsearch clusters.</div>
+          </div>-->
+        
+          <div class="cert">
+            <div class="cert-title">Certified Jenkins Engineer (CJE)</div>
+            <div class="cert-dates">From Apr 2021; <span class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></span></div>
+            <div class="cert-description">Tests basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing CI/CD pipelines in Jenkins.</div>
           </div>
-          <div class="cert-break"></div> -->
+        
+          <div class="cert">
+            <div class="cert-title">Certified Kubernetes Administrator (CKA)</div>
+            <div class="cert-dates">Mar 2021 - Mar 2024; <span class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></span></div>
+            <div class="cert-description">A performance-based test focuses on the skills needed to be a successful Kubernetes Administrator.</div>
+          </div>
+        
+          <div class="cert">
+            <div class="cert-title">Red Hat Certified Engineer (RHCE)</div>
+            <div class="cert-dates">Feb 2021 - Feb 2024; <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></div>
+            <div class="cert-description">A performance-based test focuses on Ansible automated configuration of Red Hat Enterprise Linux 8.</div>
+          </div>
+        
+          <div class="cert">
+            <div class="cert-title">Red Hat Certified System Administrator (RHCSA)</div>
+            <div class="cert-dates">Jan 2021 - Feb 2024; <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></div>
+            <div class="cert-description">A performance-based test focused on installation and configuration of Red Hat Enterprise Linux 8.</div>
+          </div>
+
         </div>
       </div>
-
+      
       <div class="resume-section">
-        <h2>Personal Qualities</h2>
+        <h3>Personal</h3>
+        <hr>
         <div class="section-body">
-          Self learner, highly self motivated, reliable, good interpersonal skills, detail oriented.
-        </div>
-      </div>
-
-      <div class="resume-section">
-        <h2>Traditional Education</h2>
-        <div class="section-body">
-          Some college (Computer Science) - Butte College.
-        </div>
-      </div>
-
-      <div class="resume-section">
-        <h2>References</h2>
-        <div class="section-body">
-          References upon request.
+            <p>Sandan (3rd degree black belt) and Sensei (instructor) in Aiki Jujutsu</p>
+            <p>I have built my own <a href="https://github.com/iPenguin/bare-metal-kubernetes">Bare Metal Kubernetes Cluster</a> for my home lab.</p>
         </div>
       </div>
     </div>
