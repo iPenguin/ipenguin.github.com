@@ -12,8 +12,6 @@ categories: [kubernetes, k8s, development, cluster, lenovo]
 comments: true
 ---
 
-## Tales of a Bare Metal Kubernetes Cluster
-
 ### Background
 
 For the last couple of years I have been running Docker on a Lenovo ThinkCentre M720q for most of my home network services, but I wanted to move to a Kubernetes cluster so when I began studying for the Certified Kubernetes Administrator (CKA) exam I knew I would take time to create a cluster for my home network as well.
