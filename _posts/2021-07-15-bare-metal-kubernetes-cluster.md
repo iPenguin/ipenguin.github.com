@@ -34,8 +34,6 @@ After some research I figured out that the problem was likely platform specific.
 
 I continued development on the VMs for several weeks before deciding that the Rock64 boards were more trouble then they were worth. I wiped my desktop machine and turned it into a cluster node, and purchased a 3rd ThinkCentre device on eBay. I scrounged up some spare drives and memory and tried to get the specs as close to each other as possible.
 
-![My personal Kubernetes cluster](/assets/images/cluster.jpg "A 3 node K8s cluster")
-
 Here are the hardware specs for the nodes:
 
  | Model | M720q | M75q-1 | M920q |
@@ -48,7 +46,7 @@ Here are the hardware specs for the nodes:
 
 All of the code for this cluster setup can be found in the [bare metal kubernetes](https://github.com/iPenguin/bare-metal-kubernetes) repo on my GitHub account.
 
-###Final Thoughts
+### Final Thoughts
 
 As a future upgrade I've considered removing Kubuernetes from the platform and creating 2 VMs on each device. The first VM would have the minimum specs needed to be a master Kubernetes node, and the second VM would take up all additional resources as a worker node. This would allow for the 3 master nodes needed to have a quorum in a production environment and also have 3 worker nodes.
 
