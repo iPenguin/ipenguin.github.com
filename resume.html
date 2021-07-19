@@ -45,10 +45,15 @@
           margin-bottom: 0;
         }
         
+        .skills-section-title {
+          font-weight: bold;
+        }
+        
         .job {
           margin-top: 0.5em;
+          margin-left: 0.5em;
         }
-        .job-company {
+        .job-company-name {
           font-weight: bold;
         }
         .job-location {
@@ -66,14 +71,21 @@
         }
         .job-description ul {
           margin: 0.5em;
-          padding-left: 2em;
+          padding-left: 1em;
         }
         
         .cert-title {
           font-weight: bold;
           margin-top: 0.5em;
         }
-
+        .cert-dates {
+          font-style: italic;
+        }
+        @media print {
+            header {
+                margin-top: 0;
+            }
+        }
         @media screen and (max-width: 700px ) {
         }
     </style>
@@ -95,115 +107,128 @@
         <h3>About Me</h3>
         <hr>
         <div class="section-body">
-            <p>I am a creator who has written software that makes work easier.</p>
-            <p>I am a builder who has designed systems that are reliable, stable, and robust.</p>
-            <p>I am a life long learner who figures out what is needed to solve problems.</p>
-            <p>I am a problem solver who learns what is needed to create or build solutions.</p>
+            <p>I am a creator who has developed software and designed systems that effectively address identified needs. I am energized and engaged when I have problems to solve especially if those problems require code to be written and tedium to be automated.</p>
         </div>
       </div>
       <div class="resume-section">
         <h3>Skills</h3>
         <hr>
         <div class="section-body">
-            <p>Professional: CentOS, Git, SSH, Ansible, JavaScript, Perl, C++, mySQL, Apache, Nginx, Docker, Virtualizaiton, DNS, DHCP, leadship, conflict resolution</p>
-            <p>Personal: Kubernetes, Ansible, Docker, Jenkins, CI/CD, RHEL, Ubuntu</p>
+            <p><span class="skills-section-title">Professional:</span> CentOS, Git, SSH, Ansible, JavaScript, Perl, C++, mySQL, Apache, Nginx, Docker, Virtualization, DNS, DHCP, Samba, CUPS
+            <p><span class="skills-section-title">Soft:</span> problem-solving, critical-thinking, willingness to learn, leadership, effective communication</p>
+            <p><span class="skills-section-title">Personal:</span> Kubernetes, Jenkins, CI/CD, Ubuntu, NFS</p>
         </div>
       </div>
       <div class="resume-section">
         <h3>Experience</h3>
         <hr>
         <div class="section-body">
-          <div class="job">
-            <div class="job-company">Plumbing Supply Group, LLC; <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Chief Technology Officer, <span class="job-dates">Jan 2019 - Oct 2020</span></div>
-            <div class="job-description">
-              <p>An eCommerce company that specializes in plumbing and related products.</p>
-              <ul>
-                <li>Supervised a department of 3 direct and 5 indirect report employees.</li>
-                <li>Increased Ansible automation and introduced Docker usage for some services.</li>
-                <li>Oversaw managment of multiple active websites and Increased our level of PCI-DSS compliance.</li>
-              </ul>
+          <div class="job-company">
+            <div class="job-company-name">Plumbing Supply Group, LLC; <span class="job-location">Chico, CA</span></div>
+            <p>An e-Commerce company that specializes in plumbing and related products.</p>
+            <div class="job">
+                <div class="job-title">Chief Technology Officer, <span class="job-dates">Jan 2019 - Oct 2020</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Supervised a department of 3 direct and 5 indirect report employees.</li>
+                    <li>Increased Ansible automation and introduced Docker usage for some services.</li>
+                    <li>Managed multiple active websites and increased the level of PCI-DSS compliance.</li>
+                </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-title">Application Developer / System Administrator, <span class="job-dates">May 2014 - Jan 2019</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Helped convert custom CMS from C++ to Perl &amp; JavaScript (with WebSockets, jQuery, HTML, &amp; CSS).</li>
+                    <li>Automated and encrypted the backup process and updated the software stack.</li>
+                    <li>Converted SVN code repos to Git and updated automated deployment process from FTP to SSH.</li>
+                    <li>Replaced a dozen workstations with Raspberry Pi kiosks to lower total cost of ownership.</li>
+                    <li>Converted main e-Commerce site from Apache to Nginx for performance gains.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">Plumbing Supply Group, LLC; <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Application Developer / System Administrator, <span class="job-dates">May 2014 - Jan 2019</span></div>
-            <div class="job-description">
-              <ul>
-                <li>Helped convert custom CMS from C++ to Perl &amp; JavaScript (with WebSockets, jQuery, HTML, &amp; CSS).</li>
-                <li>Automated and encrypted the backup process and updated the software stack.</li>
-                <li>Converted SVN code repos to git and updated automated deployment process from FTP to SSH.</li>
-                <li>Replaced a dozen workstations with Raspberry Pi kiosks to lower total cost of owenership.</li>
-                <li>Converted main eCommerce site from Apache to nginx for performance gains.</li>
-              </ul>
+          <div class="job-company">
+            <div class="job-company-name">Stitch Works Software; <span class="job-location">Chico, CA</span></div>
+            <p>A company dedicated to crochet symbol design software</p>
+            <div class="job">
+                <div class="job-title">Small Business Owner, <span class="job-dates">Jan 2011 - Dec 2014</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Developed Crochet Charts software using C++/Qt for Windows, Mac, and Linux.</li>
+                    <li>Set up and maintained Drupal-based website and store front, and sold through the Apple App Store.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">Stitch Works Software; <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Small Business Owner, <span class="job-dates">Jan 2011 - Dec 2014</span></div>
-            <div class="job-description">
-              <p>A company dedicated to crochet symbol design software</p>
-              <ul>
-                <li>Developed Crochet Charts software using C++/Qt for Windows, Mac, and Linux.</li>
-                <li>Set up and maintained Drupal-based website and store front, and sold through the Apple App Store.</li>
-              </ul>
+          <div class="job-company">
+            <div class="job-company-name">Favor Software; <span class="job-location">Chico, CA</span></div>
+            <p>A custom software development company specializing in Microsoft Access databases.<p>
+            <div class="job">
+                
+                <div class="job-title">Application &amp; Database Developer, <span class="job-dates">Sept 2006 - Dec 2010</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows &amp; Mac.</li>
+                    <li>Designed and maintained Access databases for business customers.</li>
+                    <li>Developed and led the transition of the two largest clients from Access to mySQL backends.</li>
+                    <li>Maintained local servers and backup system.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">Favor Software; <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Application &amp; Database Developer, <span class="job-dates">Sept 2006 - Dec 2010</span></div>
-            <div class="job-description">
-              <p>A custom software development company specializing in Access databases.<p>
-              <ul>
-                <li>Developed Intwined Pattern Studio (knitting chart design software) using C++/Qt for Windows &amp; Mac.</li>
-                <li>Designed and maintained Microsoft Access databases for business customers.</li>
-                <li>Developed and lead the transition of our two largest clients from Access to mySQL backends.</li>
-                <li>Maintained local servers and backup system.</li>
-              </ul>
+          
+          <div class="job-company">
+            <div class="job-company-name">OptiLife Administrators; <span class="job-location">Chico, CA</span></div>
+            <p>A third party administrator of health insurance products.</p>
+            <div class="job">
+                <div class="job-title">Website Developer, <span class="job-dates">May 2005 - Sept 2006</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Modified and maintained custom ASP-based website and reports created in Crystal Reports.</li>
+                    <li>Maintained Windows 2000 Servers and about a dozen user workstations.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">OptiLife Administrators; <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Website Developer, <span class="job-dates">May 2005 - Sept 2006</span></div>
-            <div class="job-description">
-              <p>A third party administrator of health insurance products.</p>
-              <ul>
-                <li>Modified and maintained custom ASP-based website and reports created in Crystal Reports.</li>
-                <li>Maintained Windows 2000 Servers and about a dozen user workstations.</li>
-              </ul>
+          <div class="job-company">
+            <div class="job-company-name">Butte Community College: Center for Information Technology (CIT); <span class="job-location">Chico, CA</span></div>
+            <p>A satellite campus for Computer Science courses in Chico.</p>
+            <div class="job"> 
+                <div class="job-title">Interim Systems Administrator (Student Position), <span class="job-dates">June 2002 - May 2003</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) systems and services.</li>
+                    <li>Maintained user accounts for students and teachers.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">Butte Community College: Center for Information Technology (CIT); <span class="job-location">Chico, CA</span></div>
-            <div class="job-title">Interim Systems Administrator, <span class="job-dates">Jun 2002 - May 2003</span></div>
-            <div class="job-description">
-              <p>A satallite campus for Computer Science courses in Chico. Student position.</p>
-              <ul>
-                <li>Administrated Solaris (45%), GNU/Linux (30%), and Windows 2000 (25%) systems and services.</li>
-                <li>Maintained accounts for students and teachers.</li>
-              </ul>
+          <div class="job-company">
+            <div class="job-company-name">Ceder Creek Publishing; <span class="job-location">Paradise, CA</span></div>
+            <p>A bulk mailing and marketing company.</p>
+            <div class="job">
+                <div class="job-title">Mail Processor / Filemaker Database Designer (Contract work), <span class="job-dates">Dec 2001 - Apr 2006</span></div>
+                <div class="job-description">
+                <ul>
+                    <li>Set up and sent out bulk mailings.</li>
+                    <li>Developed a couple of Filemaker databases.</li>
+                </ul>
+                </div>
             </div>
           </div>
-          <div class="job">
-            <div class="job-company">Ceder Creek Publishing; <span class="job-location">Paradise, CA</span></div>
-            <div class="job-title">Bulk Mailing / Filemaker Database Designer, <span class="job-dates">Dec 2001 - Apr 2006</span></div>
-            <div class="job-description">
-              <p>A bulk mailing and marketing company. Contract work.</p>
-              <ul>
-                <li>Set up and sent out bulk mailings.</li>
-                <li>Developed a couple of Filemaker databases.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="job">
-            <div class="job-company">Merchandise Testing Labs (MTL) USA; <span class="job-location">Brockton, MA</span></div>
-            <div class="job-title">Information Systems Analyst, <span class="job-dates">Jun 2001 - Nov 2001</span></div>
-            <div class="job-description">
+          <div class="job-company">
+            <div class="job-company-name">Merchandise Testing Labs (MTL) USA; <span class="job-location">Brockton, MA</span></div>
             <p>Tested client products to verify they met safety and quality standards.</p>
-            <ul>
-              <li>Supported over 120 employees and replaced more than 50 of their workstations.</li>
-              <li>Developed and administrated Filemaker databases.</li>
-            </ul>
+            <div class="job">
+                <div class="job-title">Information Systems Analyst, <span class="job-dates">June 2001 - Nov 2001</span></div>
+                <div class="job-description">
+                <ul>
+                <li>Supported over 120 employees and replaced more than 50 of their workstations.</li>
+                <li>Developed and administrated Filemaker databases.</li>
+                </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -228,19 +253,19 @@
           <div class="cert">
             <div class="cert-title">Certified Jenkins Engineer (CJE)</div>
             <div class="cert-dates">From Apr 2021; <span class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></span></div>
-            <div class="cert-description">Tests basic knowledge of Continuous Integration and Continuous Delivery (CI/CD) and developing CI/CD pipelines in Jenkins.</div>
+            <div class="cert-description">Basic knowledge of Continuous Integration/Continuous Delivery (CI/CD) &amp; developing CI/CD pipelines in Jenkins.</div>
           </div>
         
           <div class="cert">
             <div class="cert-title">Certified Kubernetes Administrator (CKA)</div>
             <div class="cert-dates">Mar 2021 - Mar 2024; <span class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></span></div>
-            <div class="cert-description">A performance-based test focuses on the skills needed to be a successful Kubernetes Administrator.</div>
+            <div class="cert-description">A performance-based test focused on the skills needed to be a successful Kubernetes Administrator.</div>
           </div>
         
           <div class="cert">
             <div class="cert-title">Red Hat Certified Engineer (RHCE)</div>
             <div class="cert-dates">Feb 2021 - Feb 2024; <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></div>
-            <div class="cert-description">A performance-based test focuses on Ansible automated configuration of Red Hat Enterprise Linux 8.</div>
+            <div class="cert-description">A performance-based test focused on Ansible automated configuration of Red Hat Enterprise Linux 8.</div>
           </div>
         
           <div class="cert">
@@ -256,7 +281,8 @@
         <h3>Personal</h3>
         <hr>
         <div class="section-body">
-            <p>Sandan (3rd degree black belt) and Sensei (instructor) in Aiki Jujutsu</p>
+            <p>I have my 3rd degree black belt (Sandan) and I am an instructor (Sensei) in Aiki Jujutsu.</p>
+            <p>I enjoy playing board and card games with friends.</p>
             <p>I have built my own <a href="https://github.com/iPenguin/bare-metal-kubernetes">Bare Metal Kubernetes Cluster</a> for my home lab.</p>
         </div>
       </div>
