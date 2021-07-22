@@ -1,5 +1,5 @@
 ---
-title: "5 Things I've Learned About K8s Clusters Since Passing the CKA"
+title: "5 Things I've Learned About Kubernetes Clusters Since Passing the CKA"
 permalink: "/2021/07/5-things-ive-learned-about-kubernetes-clusters-since-passing-the-cka.html"
 date: "2021-07-16 12:00:00"
 updated: "2021-07-16 12:00:00"
@@ -11,8 +11,6 @@ header:
 categories: [kubernetes, k8s, development, cluster, monitoring, storage, ipv6, troubleshooting, metallb]
 comments: true
 ---
-
-## 5 Things I've Learned About Kubernetes Clusters Since Passing the CKA
 
 While I was studying for the exam I began to setup my own [bare metal Kubernetes cluster home lab](/posts/bear-metal-kubernetes-cluster-home-lab). I continue to iterate and improve the setup and to test it by deploying different workloads into it.
 
