@@ -12,7 +12,7 @@ categories: [kubernetes, k8s, development, cluster, monitoring, storage, ipv6, t
 comments: true
 ---
 
-While I was studying for the exam I began to setup my own [bare metal Kubernetes cluster home lab](/posts/bear-metal-kubernetes-cluster-home-lab). I continue to iterate and improve the setup and to test it by deploying different workloads into it.
+While I was studying for the exam I began to setup my own [bare metal Kubernetes cluster home lab](/2021/07/bare-metal-kubernetes-cluster.html). I continue to iterate and improve the setup and to test it by deploying different workloads into it.
 
 In that process of setup and refinement I learned a number of things that were not covered in the CKA. This post contains the top 5 topics where I've spent additional time learning in order to build a complete bare metal Kubernetes cluster.
 
