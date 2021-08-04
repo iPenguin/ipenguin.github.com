@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Brian Milco's Resume</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic">
     <style>
@@ -45,11 +45,11 @@
         .section-body p {
           margin-bottom: 0;
         }
-        
+
         .skills-section-title {
           font-weight: bold;
         }
-        
+
         .job {
           margin-top: 0.5em;
           margin-left: 0.5em;
@@ -74,12 +74,17 @@
           margin: 0.5em;
           padding-left: 1em;
         }
-        
+
         .cert-title {
           font-weight: bold;
           margin-top: 0.5em;
         }
         .cert-dates {
+          font-weight: normal;
+          font-style: italic;
+        }
+
+        .japanese {
           font-style: italic;
         }
         @media print {
@@ -87,7 +92,7 @@
                 margin-top: 0;
             }
         }
-        
+
     </style>
   </head>
   <body>
@@ -166,7 +171,7 @@
             <div class="job-company-name">Favor Software; <span class="job-location">Chico, CA</span></div>
             <p>A custom software development company specializing in Microsoft Access databases.<p>
             <div class="job">
-                
+
                 <div class="job-title">Application &amp; Database Developer, <span class="job-dates">Sept 2006 - Dec 2010</span></div>
                 <div class="job-description">
                 <ul>
@@ -178,7 +183,7 @@
                 </div>
             </div>
           </div>
-          
+
           <div class="job-company">
             <div class="job-company-name">OptiLife Administrators; <span class="job-location">Chico, CA</span></div>
             <p>A third party administrator of health insurance products.</p>
@@ -195,7 +200,7 @@
           <div class="job-company">
             <div class="job-company-name">Butte Community College: Center for Information Technology (CIT); <span class="job-location">Chico, CA</span></div>
             <p>A satellite campus for Computer Science courses in Chico.</p>
-            <div class="job"> 
+            <div class="job">
                 <div class="job-title">Interim Systems Administrator (Student Position), <span class="job-dates">June 2002 - May 2003</span></div>
                 <div class="job-description">
                 <ul>
@@ -244,45 +249,56 @@
         <h3>Certifications</h3>
         <hr>
         <div class="section-body">
-          <!-- <div class="cert">
-            <div class="cert-title">Elastic Certified Engineer (ECE)</div>
-            <div class="cert-dates">Currently studying for exam; <span class="cert-id">Verify:  <a href=""></a></div></span>
-            <div class="cert-description">This performance-based test focuses on the skills need to administrate and work with Elasticsearch clusters.</div>
-          </div>-->
-        
           <div class="cert">
-            <div class="cert-title">Certified Jenkins Engineer (CJE)</div>
-            <div class="cert-dates">From Apr 2021; <span class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></span></div>
+            <div class="cert-title">Amazon Web Services: Solutions Architect Associate (SAA);
+              <span class="cert-dates">Currently studying for exam<!--: <span class="cert-id"><a href=""></a></span>--></span>
+            </div>
+            <div class="cert-description">This test focuses on the skills need to architect and deploy applications on Amazon technologies.</div>
+          </div>
+
+          <div class="cert">
+            <div class="cert-title">Elastic Certified Engineer (ECE);
+              <span class="cert-dates">Currently studying for exam<!--: <span class="cert-id"><a href=""></a></span>--></span>
+            </div>
+            <div class="cert-description">This performance-based test focuses on the skills need to administrate and work with Elasticsearch clusters.</div>
+          </div>
+
+          <div class="cert">
+            <div class="cert-title">Certified Jenkins Engineer (CJE);
+              <span class="cert-dates">From Apr 2021: <span class="cert-id"><a href="https://certificates.cloudbees.com/eda8af5f-4d14-4613-a377-b7ea11e64ae4">31336620</a></span></span>
+            </div>
             <div class="cert-description">Basic knowledge of Continuous Integration/Continuous Delivery (CI/CD) &amp; developing CI/CD pipelines in Jenkins.</div>
           </div>
-        
+
           <div class="cert">
-            <div class="cert-title">Certified Kubernetes Administrator (CKA)</div>
-            <div class="cert-dates">Mar 2021 - Mar 2024; <span class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></span></div>
+            <div class="cert-title">Certified Kubernetes Administrator (CKA);
+              <span class="cert-dates">Mar 2021 - Mar 2024: <span class="cert-id"><a href="https://training.linuxfoundation.org/certification/verify/">LF-prv0m8c401</a></span></span>
+            </div>
             <div class="cert-description">A performance-based test focused on the skills needed to be a successful Kubernetes Administrator.</div>
           </div>
-        
+
           <div class="cert">
-            <div class="cert-title">Red Hat Certified Engineer (RHCE)</div>
-            <div class="cert-dates">Feb 2021 - Feb 2024; <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></div>
+            <div class="cert-title">Red Hat Certified Engineer (RHCE);
+              <span class="cert-dates">Feb 2021 - Feb 2024: <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></span>
+            </div>
             <div class="cert-description">A performance-based test focused on Ansible automated configuration of Red Hat Enterprise Linux 8.</div>
           </div>
-        
+
           <div class="cert">
-            <div class="cert-title">Red Hat Certified System Administrator (RHCSA)</div>
-            <div class="cert-dates">Jan 2021 - Feb 2024; <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></div>
+            <div class="cert-title">Red Hat Certified System Administrator (RHCSA);
+              <span class="cert-dates">Jan 2021 - Feb 2024: <span class="cert-id"><a href="https://rhtapps.redhat.com/verify?certId=210-007-795">210-007-795</a></span></span>
+            </div>
             <div class="cert-description">A performance-based test focused on installation and configuration of Red Hat Enterprise Linux 8.</div>
           </div>
 
         </div>
       </div>
-      
+
       <div class="resume-section">
         <h3>Personal</h3>
         <hr>
         <div class="section-body">
-            <p>I have my 3rd degree black belt (Sandan) and I am an instructor (Sensei) in Aiki Jujutsu.</p>
-            <p>I enjoy playing board and card games with friends.</p>
+            <p>I have my 3rd degree black belt (<span class="japanese">Sandan</span>) and I am an instructor (<span class="japanese">Sensei</span>) in Aiki Jujutsu.</p>
             <p>I have built my own <a href="https://github.com/iPenguin/bare-metal-kubernetes">Bare Metal Kubernetes Cluster</a> for my home lab.</p>
         </div>
       </div>
