@@ -4,7 +4,7 @@ title                    : "iPenguin"
 title_separator          : "-"
 name                     : "Brian Milco"
 description              : "Tales from the command line"
-url                      : "https://iPenguin.ws"
+url                      : "https://brian.milco.info"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : ipenguin.github.com/
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
