@@ -3,7 +3,7 @@ title: "Running FreeIPA in Kubernetes"
 permalink: "/2023/05/freeipa-in-kubernetes.html"
 date: "2023-05-06 20:00:00"
 updated: "2023-05-06 20:00:00"
-excerpt: ""
+excerpt: "FreeIPA takes a long time to install and the pod was getting killed because it failed the livenessProbe."
 header:
   teaser: '/assets/images/k8s.png'
   image: /assets/images/posts/cluster.jpg
